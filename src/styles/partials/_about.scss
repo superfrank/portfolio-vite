@@ -1,0 +1,53 @@
+@use "../sass-mq/mq";
+@use "../modules/typography";
+@use "../modules/colors";
+
+// h1 {
+//
+//
+//
+// }
+
+.title-alt {
+  color: colors.$black;
+  display: block;
+  padding-top: 2.5vw;
+
+  @include mq.mq(desktop) {
+    padding-top: 0.5vw;
+  }
+}
+.about {
+  text-align: left;
+  display: block;
+  margin-bottom: 30vw;
+
+  @include mq.mq(desktop) {
+    margin-bottom: 8vw;
+  }
+
+  &__header {
+    -webkit-font-smoothing: antialiased;
+    font-family: typography.$sans-serif;
+    font-size: typography.$font-size-eight;
+    line-height: 1.2;
+    // padding top calculates logo size as it's absolutely positioned
+    padding-top: calc(8.5vw + 1rem);
+    color: colors.$brand-1;
+
+    @include mq.mq(desktop) {
+      font-size: typography.$font-size-four;
+      padding-top: calc(2.1vw + 32px);
+    }
+  }
+}
+
+.info__main {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.info__copyright {
+  font-size: typography.$font-size-body;
+  color: colors.$white;
+}

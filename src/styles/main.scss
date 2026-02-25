@@ -1,0 +1,47 @@
+// Media Queries
+@use "sass-mq/mq" as mq;
+
+// Modules and Variables
+@use "modules/colors" as colors;
+@use "modules/typography" as type;
+@use "modules/mixins" as mixins;
+
+// // Common Partials
+// @import "partials/common/_header";
+// @import "partials/common/_paragraph";
+// @import "partials/common/_subheader";
+// @import "partials/common/_description";
+// @import "partials/common/_meta";
+//
+// Partials
+@use "partials/about";
+@use "partials/base";
+@use "partials/logo";
+// @import "partials/_base";
+// @import "partials/_about";
+// @import "partials/_logo";
+// @import "partials/_social";
+// @import "partials/_footer";
+// @import "partials/_contact";
+// @import "partials/_project-list";
+// @import "partials/_featured-project";
+// @import "partials/_article-head";
+// @import "partials/_article-content";
+// @import "partials/_article-overrides";
+// @import "partials/_selected-work";
+// @import "partials/_marquee";
+// @import "partials/_image-hover";
+// @import "partials/_animation";
+// Custom
+// @import "partials/_one-page";
+
+// h1 {
+//   color: colors.$brand-1;
+//   font-family: type.$sans-serif;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+html {
+  visibility: visible;
+  opacity: 1;
+}

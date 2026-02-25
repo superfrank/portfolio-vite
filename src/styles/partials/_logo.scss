@@ -1,0 +1,54 @@
+@use "../sass-mq/mq";
+@use "../modules/colors";
+
+.logo {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+
+  @include mq.mq(tablet) {
+    left: 20px;
+  }
+
+  @include mq.mq(wide) {
+    left: 5%;
+    top: 2.5vh;
+  }
+
+  svg {
+    width: auto;
+    height: 5vw;
+
+    @include mq.mq(desktop) {
+      width: 79px;
+      height: 32px;
+    }
+  }
+}
+
+.logo__eye-white {
+  fill: #fff;
+}
+
+.logo__frame {
+  fill: colors.$black;
+  transition: fill 0.6s ease;
+}
+
+.logo__link:hover #frames {
+  fill: colors.$brand-1;
+}
+
+.logo--home {
+  .logo__link:hover #frames {
+    fill: colors.$brand-1;
+  }
+}
+
+// .logo--internet {
+//   .logo__link:hover #frames {
+//     fill: colors.$brand-1;
+//   }
+// }
