@@ -1,0 +1,488 @@
+$g-blue: #4285f4;
+$g-red: #ea4335;
+$g-yellow: #fbbc05;
+$g-green: #34a853;
+
+.one-page {
+    .section {
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .section-header {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 15vw;
+        letter-spacing: -0.1vw;
+
+        @include mq(desktop) {
+            font-size: $font-size-eight;
+        }
+
+        span:nth-of-type(1) {
+            color: $g-blue;
+        }
+        span:nth-of-type(2) {
+            color: $g-red;
+        }
+        span:nth-of-type(3) {
+            color: $g-yellow;
+        }
+        span:nth-of-type(4) {
+            color: $g-blue;
+        }
+        span:nth-of-type(5) {
+            color: $g-green;
+        }
+    }
+    .search-bubble {
+        background: #fff;
+        display: flex;
+        border: 1px solid #dfe1e5;
+        border-radius: 12vw;
+        height: 12vw;
+        width: 95vw;
+        margin: 0 auto;
+        align-items: center;
+        padding-left: 4vw;
+        margin-top: 3vw;
+
+        @include mq(desktop) {
+            margin-top: 0vw;
+            width: 40vw;
+            height: 3.5vw;
+            border-radius: 3.5vw;
+            padding-left: 1.5vw;
+        }
+    }
+    h2 {
+        font-size: 5vw;
+
+        @include mq(desktop) {
+            font-size: 1.5vw;
+        }
+        span {
+            border-right: 0.05em solid;
+            animation: caret 1s steps(1) infinite;
+        }
+    }
+    .search-button {
+        background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46vw;
+        height: 10vw;
+        border-radius: 0.3vw;
+        margin-top: 5vw;
+        cursor: pointer;
+
+        @include mq(desktop) {
+            width: 12vw;
+            height: 3vw;
+            border-radius: 0.3vw;
+            margin-top: 1.5vw;
+        }
+
+        h3 {
+            font-size: 5vw;
+            color: #5f6368;
+            @include mq(desktop) {
+                font-size: 1.2vw;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+            background-color: #f8f8f8;
+            border: 1px solid #c6c6c6;
+            h3 {
+                color: #222;
+            }
+        }
+    }
+    .multiple-hands {
+        margin-top: -10vw;
+        z-index: -1;
+
+        svg {
+            overflow: visible;
+            width: 74vw;
+            height: 100%;
+
+            @include mq(desktop) {
+                width: 22vw;
+                height: 100%;
+            }
+        }
+        @include mq(desktop) {
+            margin-top: -3vw;
+        }
+    }
+    .fade-in {
+        opacity: 0;
+
+        animation: fadeIn 1s ease-in forwards;
+        animation-delay: 3s;
+    }
+
+    .multiple-hand {
+        &__one {
+            animation: slide1 4s ease-in-out infinite;
+            animation-delay: 0s;
+        }
+        &__two {
+            animation: slide2 4s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        &__three {
+            animation: slide3 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        &__four {
+            animation: slide4 4s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes slide1 {
+        0% {
+            transform: translate3d(0vw, 0, 0);
+        }
+        10% {
+            transform: translate3d(-0.8vw, 0, 0);
+        }
+        20% {
+            transform: translate3d(0.1vw, 0, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide2 {
+        0% {
+            transform: translate3d(0vw, -0vw, 0);
+        }
+        10% {
+            transform: translate3d(-0.5vw, 0.5vw, 0);
+        }
+        20% {
+            transform: translate3d(0.1vw, -0.1vw, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide3 {
+        0% {
+            transform: translate3d(-0vw, -0vw, 0);
+        }
+        10% {
+            transform: translate3d(0.5vw, 0.5vw, 0);
+        }
+        20% {
+            transform: translate3d(-0.1vw, -0.1vw, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide4 {
+        0% {
+            transform: translate3d(0vw, 0, 0);
+        }
+        10% {
+            transform: translate3d(0.8vw, 0, 0);
+        }
+        20% {
+            transform: translate3d(-0.1vw, 0, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+
+    h4 {
+        font-size: 10vw;
+        // padding-top: 2.5%;
+        line-height: 1;
+        @include mq(desktop) {
+            font-size: $font-size-eight;
+        }
+    }
+
+    #point-1,
+    #point-4 {
+        h4 {
+            color: $g-blue;
+        }
+        a {
+            background: linear-gradient(to bottom, $g-blue 0%, $g-blue 100%);
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+            color: $black;
+            text-decoration: none;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%234285f4' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+        }
+    }
+    #point-2 {
+        h4 {
+            color: $g-red;
+        }
+        a {
+            background: linear-gradient(
+                to bottom,
+                $g-red 0%,
+                $g-red 100%
+            );
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+            color: $black;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ea4335' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+        }
+    }
+    #point-3 {
+        h4 {
+            color: $g-yellow;
+        }
+        a {
+            background: linear-gradient(
+                to bottom,
+                $g-yellow 0%,
+                $g-yellow 100%
+            );
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+            color: $black;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23fbbc05' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+        }
+    }
+    #point-5 {
+        h4 {
+            color: $g-green;
+        }
+        a {
+            background: linear-gradient(to bottom, $g-green 0%, $g-green 100%);
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+            color: $black;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2334a853' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+        }
+
+        .footer {
+            a {
+                background: none;
+            }
+        }
+    }
+    .grid {
+        margin: 0;
+    }
+
+    p {
+        color: $black;
+        padding-top: 10px;
+        @include mq(desktop) {
+            padding-top: 2.5vw;
+        }
+    }
+
+    .big-mickey-hand {
+        padding-top: 10px;
+        svg {
+            width: 20vw;
+            height: 20vw;
+        }
+        @include mq(desktop) {
+            padding-top: 1vw;
+
+            svg {
+                width: 8vw;
+                height: 8vw;
+            }
+        }
+    }
+
+    .big-mickey-hand__wave {
+        svg {
+            fill: $g-blue;
+            animation-name: wave; /* Refers to the name of your @keyframes element below */
+            animation-duration: 5s; /* Change to speed up or slow down */
+            animation-iteration-count: infinite; /* Never stop waving :) */
+            transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+        }
+    }
+    .big-mickey-hand__call {
+        animation-name: wave; /* Refers to the name of your @keyframes element below */
+        animation-duration: 5s; /* Change to speed up or slow down */
+        animation-iteration-count: infinite; /* Never stop waving :) */
+        transform-origin: 5% 40%; /* Pivot around the bottom-left palm */
+    }
+    .big-mickey-hand__one {
+        svg {
+            fill: $g-red;
+        }
+    }
+    .big-mickey-hand__two {
+        svg {
+            fill: $g-yellow;
+        }
+    }
+    .big-mickey-hand__three {
+        svg {
+            fill: $g-blue;
+        }
+    }
+    .big-mickey-hand__four {
+        svg {
+            fill: $g-green;
+        }
+    }
+
+    @keyframes wave {
+        0% {
+            transform: rotate(0deg);
+        }
+        5% {
+            transform: rotate(14deg);
+        } /* The following five values can be played with to make the waving more or less extreme */
+        10% {
+            transform: rotate(-8deg);
+        }
+        15% {
+            transform: rotate(14deg);
+        }
+        20% {
+            transform: rotate(-4deg);
+        }
+        25% {
+            transform: rotate(10deg);
+        }
+        30% {
+            transform: rotate(0deg);
+        } /* Reset for the last half to pause */
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes caret {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    [data-aos="new-fade-down"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+        transform: translate3d(0, -3vw, 0);
+
+        &.aos-animate {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        @include mq(desktop) {
+            transform: translate3d(0, -1vw, 0);
+
+            &.aos-animate {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    [data-aos="new-fade-up"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+        transform: translate3d(0, 3vw, 0);
+
+        &.aos-animate {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        @include mq(desktop) {
+            transform: translate3d(0, 1vw, 0);
+
+            &.aos-animate {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    .footer__one-page {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        a:hover {
+            color: $g-green;
+        }
+    }
+    .g-green {
+        color: $g-green;
+    }
+    .footer-no-margin {
+        padding-top: 5px;
+    }
+}
