@@ -1,14 +1,11 @@
 import LogoMark from "./LogoMark";
 
-const Logo = ({
-  href = "/",
-  variant = "default", // "default" | "internet"
-  home = false,
-}) => {
+const Logo = ({ href = "/", context = "home", theme = "default" }) => {
   const rootClasses = [
     "logo",
-    home ? "logo--home" : "",
-    variant === "internet" ? "logo--internet" : "",
+    context === "home" ? "logo--home" : "",
+    context === "article" ? "logo--article" : "",
+    context === "article" ? `logo--theme-${theme}` : "",
   ]
     .filter(Boolean)
     .join(" ");

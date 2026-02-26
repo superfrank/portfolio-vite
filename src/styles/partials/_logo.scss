@@ -50,8 +50,14 @@
   }
 }
 
-// .logo--internet {
+.logo--theme-internet {
+  .logo__link:hover #frames {
+    fill: colors.$brand-1;
+  }
+}
+
+// .logo--theme-election {
 //   .logo__link:hover #frames {
-//     fill: colors.$brand-1;
+//     fill: #00b2ff;
 //   }
 // }
