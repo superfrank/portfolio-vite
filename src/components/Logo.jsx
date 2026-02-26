@@ -3,7 +3,7 @@ import LogoMark from "./LogoMark";
 const Logo = ({ href = "/", context = "home", theme = "default" }) => {
   const rootClasses = [
     "logo",
-    context === "home" ? "logo--home" : "",
+    context === "home" ? "logo--home anim-fade-down-in" : "",
     context === "article" ? "logo--article" : "",
     context === "article" ? `logo--theme-${theme}` : "",
   ]
@@ -11,7 +11,7 @@ const Logo = ({ href = "/", context = "home", theme = "default" }) => {
     .join(" ");
 
   return (
-    <header className={`${rootClasses} wrapper`} id="logo">
+    <header className={`${rootClasses} wrapper `} id="logo">
       <a className="logo__link" href={href} aria-label="Home">
         <LogoMark />
       </a>

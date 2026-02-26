@@ -10,7 +10,7 @@ const FeaturedProject = ({
   const hasMedia = Boolean(mediaSrc);
 
   return (
-    <section className="featured-project wrapper">
+    <section className="featured-project wrapper anim-fade-up-in">
       <div className="featured-project__media-wrap">
         <div className="featured-project__media-group">
           <div className="featured-project__media">

@@ -1,0 +1,76 @@
+@use "../sass-mq/mq";
+
+.anim-fade-up-in {
+  animation-name: fadeUpIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.8s;
+  animation-timing-function: ease-out;
+  opacity: 0;
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.anim-fade-down-in {
+  animation-name: fadeDownIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-out;
+  opacity: 0;
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeUpIn {
+  from {
+    transform: translate3d(0, 3vw, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@include mq.mq(tablet) {
+  @keyframes fadeUpIn {
+    from {
+      transform: translate3d(0, 1vw, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes fadeDownIn {
+  from {
+    transform: translate3d(0, -3vw, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@include mq.mq(tablet) {
+  @keyframes fadeDownIn {
+    from {
+      transform: translate3d(0, -1vw, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}

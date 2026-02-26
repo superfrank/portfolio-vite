@@ -1,6 +1,6 @@
 const AboutIntro = () => {
   return (
-    <section className="about wrapper">
+    <section className="about wrapper anim-fade-down-in">
       <h1 className="about__header">
         Frank Hulley-Jones
         <span className="title-alt">

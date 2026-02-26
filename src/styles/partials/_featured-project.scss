@@ -152,19 +152,6 @@
         font-size: 20px;
       }
     }
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   width: 8px;
-    //   height: 8px;
-    //   border-radius: 50%;
-    //   background: #00b2ff;
-    //   transform: translate(-50%, -50%);
-    //   pointer-events: none;
-    // }
   }
   &__divider {
     margin-top: 5.8rem;
@@ -287,8 +274,8 @@
         top: -0.8rem;
       }
       @include mq.mq(wide) {
-        left: 0px;
-        width: 32.5vw;
+        left: -120px;
+        width: calc(32.5vw + 120px);
         top: -1.2rem;
       }
     }
