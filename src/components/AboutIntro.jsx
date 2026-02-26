@@ -1,4 +1,4 @@
-export default function AboutIntro() {
+const AboutIntro = () => {
   return (
     <section className="about wrapper">
       <h1 className="about__header">
@@ -7,10 +7,12 @@ export default function AboutIntro() {
           I was a senior graphics reporter at the Washington Post until 2026.
         </span>
         <span className="title-alt">
-          I am a visual storyteller who focuses on 3D, coding, illustration and
+          I am a visual storyteller who focuses on coding, illustration, 3D and
           interactive journalism.
         </span>
       </h1>
     </section>
   );
-}
+};
+
+export default AboutIntro;

@@ -1,4 +1,4 @@
-export default function LogoMark() {
+const LogoMark = () => {
   return (
     <svg
       version="1.1"
@@ -27,4 +27,6 @@ export default function LogoMark() {
       />
     </svg>
   );
-}
+};
+
+export default LogoMark;

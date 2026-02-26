@@ -1,7 +1,7 @@
 import Logo from "./components/Logo";
 import AboutIntro from "./components/AboutIntro";
 
-export default function App() {
+const App = () => {
   return (
     <>
       <Logo href="/" variant="default" home />
@@ -11,4 +11,6 @@ export default function App() {
       </main>
     </>
   );
-}
+};
+
+export default App;

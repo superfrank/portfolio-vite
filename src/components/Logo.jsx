@@ -1,10 +1,10 @@
 import LogoMark from "./LogoMark";
 
-export default function Logo({
+const Logo = ({
   href = "/",
   variant = "default", // "default" | "internet"
   home = false,
-}) {
+}) => {
   const rootClasses = [
     "logo",
     home ? "logo--home" : "",
@@ -20,4 +20,6 @@ export default function Logo({
       </a>
     </header>
   );
-}
+};
+
+export default Logo;
