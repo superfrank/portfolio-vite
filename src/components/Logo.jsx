@@ -14,7 +14,7 @@ export default function Logo({
     .join(" ");
 
   return (
-    <header className={rootClasses} id="logo">
+    <header className={`${rootClasses} wrapper`} id="logo">
       <a className="logo__link" href={href} aria-label="Home">
         <LogoMark />
       </a>

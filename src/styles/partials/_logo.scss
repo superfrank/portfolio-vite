@@ -2,19 +2,22 @@
 @use "../modules/colors";
 
 .logo {
-  position: absolute;
+  // position: absolute;
+  display: block;
   z-index: 5;
-  top: 10px;
-  left: 10px;
+  // top: 10px;
+  // left: 10px;
   cursor: pointer;
+  margin-top: 10px;
 
   @include mq.mq(tablet) {
-    left: 20px;
+    // left: 20px;
   }
 
   @include mq.mq(wide) {
-    left: 5%;
-    top: 2.5vh;
+    // left: 5%;
+    // top: 2.5vh;
+    margin-top: 2.5vh;
   }
 
   svg {
