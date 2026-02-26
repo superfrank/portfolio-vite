@@ -6,6 +6,9 @@
 @use "modules/typography" as type;
 @use "modules/mixins" as mixins;
 
+// Base
+@use "partials/base";
+
 // // Common Partials
 // @import "partials/common/_header";
 // @import "partials/common/_paragraph";
@@ -14,9 +17,10 @@
 // @import "partials/common/_meta";
 //
 // Partials
+
 @use "partials/about";
-@use "partials/base";
 @use "partials/logo";
+@use "partials/featured-project";
 // @import "partials/_base";
 // @import "partials/_about";
 // @import "partials/_logo";

@@ -2,15 +2,6 @@
 @use "../modules/typography";
 @use "../modules/colors";
 
-.title-alt {
-  color: colors.$black;
-  display: block;
-  padding-top: 2.5vw;
-
-  @include mq.mq(desktop) {
-    padding-top: 0.5vw;
-  }
-}
 .about {
   text-align: left;
   display: block;
@@ -32,6 +23,16 @@
     @include mq.mq(desktop) {
       font-size: typography.$font-size-four;
       //   padding-top: calc(2.1vw + 32px);
+    }
+  }
+
+  .title-alt {
+    color: colors.$black;
+    display: block;
+    padding-top: 2.5vw;
+
+    @include mq.mq(desktop) {
+      padding-top: 0.5vw;
     }
   }
 }
