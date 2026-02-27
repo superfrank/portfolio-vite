@@ -3,6 +3,7 @@ import AboutIntro from "./components/AboutIntro";
 import FeaturedProject from "./components/FeaturedProject";
 import noMowVideo from "./assets/nomow/home/promo-video.mp4";
 import noMowPoster from "./assets/nomow/home/promo-video.jpg";
+import ProjectsList from "./components/ProjectsList";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           mediaPoster={noMowPoster}
           mediaAlt="No Mow preview"
         />
+        <ProjectsList />
       </main>
     </>
   );
