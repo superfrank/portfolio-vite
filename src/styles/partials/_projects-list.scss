@@ -50,8 +50,57 @@
     font-size: 10vw;
     line-height: 1;
     font-weight: normal;
+    display: block;
+    position: relative;
+    text-align: center;
+    transform: translateY(0) rotate(0deg);
+    transition: transform 700ms ease;
+
     @include mq.mq(desktop) {
       font-size: typography.$font-size-five;
+    }
+
+    &.first {
+      margin-left: 0;
+      color: colors.$brand-1;
+      transition-delay: 0ms;
+    }
+
+    &.second {
+      margin-right: -2em;
+      color: colors.$brand-1;
+      transition-delay: 80ms;
+    }
+
+    &.third {
+      transition-delay: 160ms;
+    }
+  }
+  &__intro--active {
+    .projects-list__intro-title.first {
+      transform: translateY(12vw) rotate(-15deg);
+    }
+
+    .projects-list__intro-title.second {
+      transform: translateY(11vw) rotate(-15deg);
+    }
+
+    .projects-list__intro-title.third {
+      transform: translateY(15vw);
+    }
+
+    @include mq.mq(desktop) {
+      .projects-list__intro-title.first {
+        transform: translateY(6vw) rotate(-15deg);
+      }
+
+      .projects-list__intro-title.second {
+        transform: translateY(5.5vw) rotate(-15deg);
+      }
+
+      .projects-list__intro-title.third {
+        transform: translateY(7.5vw);
+      }
     }
   }
   &__item {

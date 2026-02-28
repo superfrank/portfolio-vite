@@ -1,4 +1,15 @@
-const ProjectList = () => {
+import { useInView } from "react-intersection-observer";
+import useIsMobile from "../hooks/useIsMobile";
+
+const ProjectsList = () => {
+  const isMobile = useIsMobile();
+
+  const { ref: introRef, inView: isIntroActive } = useInView({
+    threshold: isMobile ? 1 : 0.5,
+    rootMargin: isMobile ? "0px 0px -40% 0px" : "-6% 0px 0px 0px",
+    triggerOnce: false,
+  });
+
   const projects = [
     {
       id: 1,
@@ -41,9 +52,12 @@ const ProjectList = () => {
   return (
     <section className="projects-list wrapper">
       <div className="projects-list__grid">
-        <div className="projects-list__col-1 projects-list__intro">
+        <div
+          className={`projects-list__col-1 projects-list__intro ${isIntroActive ? "projects-list__intro--active" : ""}`}
+          ref={introRef}
+        >
           <h2 className="projects-list__intro-title first">Selected</h2>
-          <h2 className="projects-list__intro-title second">Work</h2>
+          <h2 className="projects-list__intro-title second">work</h2>
           <h2 className="projects-list__intro-title third">‘19—‘26</h2>
         </div>
         <div className="projects-list__col-2">
@@ -73,4 +87,4 @@ const ProjectList = () => {
   );
 };
 
-export default ProjectList;
+export default ProjectsList;
