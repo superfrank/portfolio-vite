@@ -82,11 +82,11 @@
     }
 
     .projects-list__intro-title.second {
-      transform: translateY(11vw) rotate(-15deg);
+      transform: translateX(10vw) translateY(12vw) rotate(15deg);
     }
 
     .projects-list__intro-title.third {
-      transform: translateY(15vw);
+      transform: translateY(13vw);
     }
 
     @include mq.mq(desktop) {
@@ -95,11 +95,11 @@
       }
 
       .projects-list__intro-title.second {
-        transform: translateY(5.5vw) rotate(-15deg);
+        transform: translateX(2vw) translateY(6vw) rotate(15deg);
       }
 
       .projects-list__intro-title.third {
-        transform: translateY(7.5vw);
+        transform: translateY(6.5vw);
       }
     }
   }
