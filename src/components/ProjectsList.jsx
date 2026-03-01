@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import useIsMobile from "../hooks/useIsMobile";
 import ProjectHoverReveal from "./ProjectHoverReveal";
@@ -19,24 +19,60 @@ const ProjectsList = () => {
 
   // Cursor
   const [revealPos, setRevealPos] = useState({ x: 0, y: 0 });
+  const frameRef = useRef(null);
+  const showFrameRef = useRef(null);
+  const pendingPosRef = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    return () => {
+      if (frameRef.current !== null) {
+        cancelAnimationFrame(frameRef.current);
+      }
+      if (showFrameRef.current !== null) {
+        cancelAnimationFrame(showFrameRef.current);
+      }
+    };
+  }, []);
 
   const updateRevealPosition = (event) => {
     if (isMobile) return;
-    setRevealPos({
+
+    pendingPosRef.current = {
       x: event.clientX + 24,
       y: event.clientY + 24,
+    };
+
+    if (frameRef.current !== null) return;
+
+    frameRef.current = requestAnimationFrame(() => {
+      setRevealPos(pendingPosRef.current);
+      frameRef.current = null;
     });
   };
 
   const handleProjectMouseEnter = (project, event) => {
     if (isMobile) return;
+
+    const nextPos = { x: event.clientX + 24, y: event.clientY + 24 };
+    pendingPosRef.current = nextPos;
+    setRevealPos(nextPos);
+
     setHoverImage(project.hoverImg);
-    updateRevealPosition(event);
-    setIsRevealVisible(true);
+    if (showFrameRef.current !== null) {
+      cancelAnimationFrame(showFrameRef.current);
+    }
+    showFrameRef.current = requestAnimationFrame(() => {
+      setIsRevealVisible(true);
+      showFrameRef.current = null;
+    });
   };
 
   const handleProjectMouseLeave = () => {
     if (isMobile) return;
+    if (showFrameRef.current !== null) {
+      cancelAnimationFrame(showFrameRef.current);
+      showFrameRef.current = null;
+    }
     setIsRevealVisible(false);
   };
 
