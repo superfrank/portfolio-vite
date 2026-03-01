@@ -159,4 +159,34 @@
       font-size: typography.$font-size-five;
     }
   }
+
+  // image hover
+  &__hover-reveal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    will-change: transform, opacity;
+    width: 40vw;
+    max-width: 420px;
+    aspect-ratio: 16 / 10;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 180ms ease;
+  }
+
+  &__hover-reveal.is-visible {
+    opacity: 1;
+  }
+
+  &__hover-reveal-inner,
+  &__hover-reveal-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__hover-reveal-img {
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 }
