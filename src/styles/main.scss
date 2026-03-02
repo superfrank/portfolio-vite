@@ -16,15 +16,18 @@
 // @import "partials/common/_description";
 // @import "partials/common/_meta";
 //
-// Partials
+
+// Partials home
+@use "pages/home/about";
+@use "pages/home/featured-project";
+@use "pages/home/projects-list";
 
 @use "partials/animation";
-@use "partials/about";
+
 @use "partials/logo";
-@use "partials/featured-project";
-@use "partials/projects-list";
-@use "partials/contact-links";
-@use "partials/footer";
+
+@use "components/layout/contact-links";
+@use "components/layout/footer";
 // @import "partials/_base";
 // @import "partials/_about";
 // @import "partials/_logo";

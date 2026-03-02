@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import useIsMobile from "../hooks/useIsMobile";
+import useIsMobile from "../../../hooks/useIsMobile";
 import ProjectHoverReveal from "./ProjectHoverReveal";
 
 // Images
-import anthropoceneImg from "../assets/home/hover/anthropocene.jpg";
-import architectureImg from "../assets/home/hover/architecture.jpg";
-import cairoImg from "../assets/home/hover/cairo.jpg";
-import internetImg from "../assets/home/hover/internet.jpg";
-import soundscapeImg from "../assets/home/hover/soundscape.jpg";
-import texasImg from "../assets/home/hover/texas.jpg";
+import anthropoceneImg from "../../../assets/home/hover/anthropocene.jpg";
+import architectureImg from "../../../assets/home/hover/architecture.jpg";
+import cairoImg from "../../../assets/home/hover/cairo.jpg";
+import internetImg from "../../../assets/home/hover/internet.jpg";
+import soundscapeImg from "../../../assets/home/hover/soundscape.jpg";
+import texasImg from "../../../assets/home/hover/texas.jpg";
 
 const ProjectsList = () => {
   const isMobile = useIsMobile();

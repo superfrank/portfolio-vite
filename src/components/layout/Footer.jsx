@@ -1,4 +1,4 @@
-import MickeyHand from "./MickeyHand";
+import MickeyHand from "../MickeyHand";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,9 @@ const Footer = () => {
         <span className="footer__label">Back to top</span>
       </a>
 
-      <div className="footer__copyright">© {currentYear} Frank Hulley-Jones</div>
+      <div className="footer__copyright">
+        © {currentYear} Frank Hulley-Jones
+      </div>
     </footer>
   );
 };

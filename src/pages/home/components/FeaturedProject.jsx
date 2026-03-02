@@ -1,5 +1,5 @@
 import FeaturedBadge from "./FeaturedBadge";
-import MickeyHand from "./MickeyHand";
+import MickeyHand from "../../../components/MickeyHand";
 
 const FeaturedProject = ({
   mediaType = "image",
