@@ -5,13 +5,13 @@ import noMowVideo from "./assets/nomow/home/promo-video.mp4";
 import noMowPoster from "./assets/nomow/home/promo-video.jpg";
 import ProjectsList from "./components/ProjectsList";
 import ContactLinks from "./components/ContactLinks";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
       <Logo href="/" variant="default" context="home" />
-      <main>
-        {/* <h1 className="site-name">Frank Hulley-Jones</h1> */}
+      <main id="top">
         <AboutIntro />
         <FeaturedProject
           mediaType="video"
@@ -21,6 +21,7 @@ const App = () => {
         />
         <ProjectsList />
         <ContactLinks />
+        <Footer />
       </main>
     </>
   );
