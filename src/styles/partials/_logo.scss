@@ -2,21 +2,12 @@
 @use "../modules/colors";
 
 .logo {
-  // position: absolute;
   display: block;
   z-index: 5;
-  // top: 10px;
-  // left: 10px;
   cursor: pointer;
   margin-top: 10px;
 
-  @include mq.mq(tablet) {
-    // left: 20px;
-  }
-
   @include mq.mq(wide) {
-    // left: 5%;
-    // top: 2.5vh;
     margin-top: 2.5vh;
   }
 
@@ -28,6 +19,23 @@
       width: 79px;
       height: 32px;
     }
+  }
+}
+
+.logo--article {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  margin-top: 0;
+
+  @include mq.mq(tablet) {
+    left: 20px;
+  }
+
+  @include mq.mq(wide) {
+    left: 5%;
+    top: 2.5vh;
   }
 }
 
@@ -52,7 +60,7 @@
 
 .logo--theme-internet {
   .logo__link:hover #frames {
-    fill: colors.$brand-1;
+    fill: #803025;
   }
 }
 

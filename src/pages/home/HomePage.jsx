@@ -5,10 +5,12 @@ import noMowPoster from "../../assets/nomow/home/promo-video.jpg";
 import ProjectsList from "./components/ProjectsList";
 import ContactLinks from "../../components/layout/ContactLinks";
 import Footer from "../../components/layout/Footer";
+import Logo from "../../components/Logo";
 
 const HomePage = () => {
   return (
     <main id="top">
+      <Logo href="/" context="home" />
       <AboutIntro />
       <FeaturedProject
         mediaType="video"

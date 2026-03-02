@@ -1,0 +1,30 @@
+@use "../../modules/colors";
+@use "../../modules/typography";
+
+.page-article {
+  min-height: 100vh;
+  background: var(--article-bg, colors.$off-white);
+  color: var(--article-text, colors.$black);
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12rem 10px 6rem;
+  }
+
+  &__title {
+    font-family: typography.$sans-serif;
+    font-size: clamp(3.2rem, 7vw, 9.6rem);
+    line-height: 1;
+    color: var(--article-accent, colors.$brand-1);
+  }
+
+  &__lede {
+    margin-top: 1.6rem;
+    font-family: typography.$sans-serif;
+    font-size: typography.$font-size-two;
+    line-height: 1.25;
+    max-width: 52ch;
+  }
+}

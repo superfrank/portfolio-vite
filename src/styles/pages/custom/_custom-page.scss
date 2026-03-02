@@ -1,0 +1,20 @@
+@use "../../modules/colors";
+@use "../../modules/typography";
+
+.page-custom {
+  min-height: 100vh;
+  background: colors.$off-white;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12rem 10px 6rem;
+  }
+
+  &__title {
+    font-family: typography.$sans-serif;
+    font-size: clamp(3rem, 6vw, 8rem);
+    line-height: 1;
+    color: colors.$brand-1;
+  }
+}

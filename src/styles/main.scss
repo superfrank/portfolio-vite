@@ -21,6 +21,13 @@
 @use "pages/home/about";
 @use "pages/home/featured-project";
 @use "pages/home/projects-list";
+@use "pages/articles/article-head";
+@use "pages/articles/article-content";
+@use "pages/articles/article-overrides";
+@use "pages/articles/article-page";
+@use "pages/articles/themes/internet";
+@use "pages/articles/themes/election";
+@use "pages/custom/custom-page";
 
 @use "partials/animation";
 

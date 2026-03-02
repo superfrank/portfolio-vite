@@ -124,7 +124,7 @@ const ProjectsList = () => {
       id: 6,
       title: "The internet",
       hoverImg: internetImg,
-      href: "internet.html",
+      href: "/internet",
       external: false,
     },
   ];

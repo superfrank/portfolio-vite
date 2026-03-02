@@ -10,8 +10,11 @@ const Logo = ({ href = "/", context = "home", theme = "default" }) => {
     .filter(Boolean)
     .join(" ");
 
+  const layoutClass = context === "home" ? "wrapper" : "";
+  const className = [rootClasses, layoutClass].filter(Boolean).join(" ");
+
   return (
-    <header className={`${rootClasses} wrapper `} id="logo">
+    <header className={className} id="logo">
       <a className="logo__link" href={href} aria-label="Home">
         <LogoMark />
       </a>
