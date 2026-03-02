@@ -188,7 +188,9 @@
     opacity: 0;
     transform: scale(0.5);
     transform-origin: 50% 50%;
-    transition: opacity 220ms ease;
+    transition:
+      opacity 220ms ease,
+      transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   &__hover-reveal-img {
@@ -206,7 +208,8 @@
 
   &__hover-reveal.is-visible .projects-list__hover-reveal-inner {
     opacity: 1;
-    animation: reveal-pop 680ms both;
+    transform: scale(1);
+    animation: reveal-pop 680ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   &__hover-reveal.is-visible .projects-list__hover-reveal-img {
@@ -216,11 +219,9 @@
   @keyframes reveal-pop {
     0% {
       transform: scale(0.5);
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     }
     58% {
       transform: scale(1.06);
-      animation-timing-function: cubic-bezier(0.2, 0.9, 0.25, 1);
     }
     100% {
       transform: scale(1);

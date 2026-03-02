@@ -15,6 +15,7 @@ const ProjectsList = () => {
   const isMobile = useIsMobile();
 
   const [isRevealVisible, setIsRevealVisible] = useState(false);
+
   const [hoverImage, setHoverImage] = useState("");
 
   // Cursor
@@ -61,6 +62,7 @@ const ProjectsList = () => {
     if (showFrameRef.current !== null) {
       cancelAnimationFrame(showFrameRef.current);
     }
+
     showFrameRef.current = requestAnimationFrame(() => {
       setIsRevealVisible(true);
       showFrameRef.current = null;
