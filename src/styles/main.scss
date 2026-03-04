@@ -9,13 +9,12 @@
 // Base
 @use "partials/base";
 
-// // Common Partials
-// @import "partials/common/_header";
-// @import "partials/common/_paragraph";
-// @import "partials/common/_subheader";
-// @import "partials/common/_description";
-// @import "partials/common/_meta";
-//
+// Common Partials
+@use "partials/common/header";
+@use "partials/common/paragraph";
+@use "partials/common/subheader";
+@use "partials/common/description";
+@use "partials/common/meta";
 
 // Partials home
 @use "pages/home/about";
