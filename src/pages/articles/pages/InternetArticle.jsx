@@ -1,10 +1,13 @@
 import Logo from "../../../components/Logo";
 import ArticleTemplate from "../components/ArticleTemplate";
 import ArticleIntro from "../components/ArticleIntro";
-import arrowRight from "../../../assets/articles/internet/arrow-right.svg";
+import MickeyHand from "../../../components/MickeyHand";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 const InternetArticle = ({ article }) => {
   const { topper, intro } = article;
+
+  const isMobile = useIsMobile();
 
   return (
     <ArticleTemplate className="article--internet">
@@ -40,24 +43,38 @@ const InternetArticle = ({ article }) => {
 
         <h1 className="headline grid__1-3">
           {intro.headline}
-          <div className="inline-link">
-            <a className="headline__link" href={intro.liveLink}>
+          {!isMobile && (
+            <div className="inline-link">
+              <a
+                className="headline__link"
+                href={intro.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <MickeyHand className="svg__mickey--link" direction="right" />
+                </span>
+                Live article
+              </a>
+            </div>
+          )}
+        </h1>
+
+        {isMobile && (
+          <div className="information__link mobile">
+            <a
+              className="headline__link"
+              href={intro.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>
-                <img className="svg__mickey--link" src={arrowRight} alt="" />
+                <MickeyHand className="svg__mickey--link" direction="right" />
               </span>
               Live article
             </a>
           </div>
-        </h1>
-
-        <div className="information__link mobile">
-          <a className="headline__link" href={intro.liveLink}>
-            <span>
-              <img className="svg__mickey--link" src={arrowRight} alt="" />
-            </span>
-            Live article
-          </a>
-        </div>
+        )}
 
         {intro.standfirst.map((standfirst, index) => (
           <h3 className="standfirst grid__2-3" key={`standfirst-${index}`}>
