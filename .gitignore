@@ -27,3 +27,9 @@ dist-ssr
 # Custom
 plan.md
 *.psd
+reference/no-mow
+public/no-mow
+public/_next
+public/models
+public/textures
+public/img

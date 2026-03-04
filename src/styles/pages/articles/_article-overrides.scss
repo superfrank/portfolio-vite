@@ -3,98 +3,151 @@
 @use "sass:color";
 
 .article--blue {
-    p {
-        a {
-        color: $blue;
-    } }
-    .topper {
-        background-color: $blue;
+  p {
+    a {
+      color: $blue;
     }
-    .introduction {
-        background-color: color.adjust($blue, $lightness: -10%);
-    }
-    .information {
-
+  }
+  .topper {
+    background-color: $blue;
+  }
+  .introduction {
+    background-color: color.adjust($blue, $lightness: -10%);
+  }
+  .information {
     &__meta {
-        color: color.adjust($blue, $lightness: -30%);
+      color: color.adjust($blue, $lightness: -30%);
     }
-}
-    .image  {
-        &__background--brand {
-            background-color: $blue;
-        }
+  }
+  .image {
+    &__background--brand {
+      background-color: $blue;
     }
-    .caption {
-        &__header {
-            color: color.adjust($blue, $lightness: -10%);
-        }
+  }
+  .caption {
+    &__header {
+      color: color.adjust($blue, $lightness: -10%);
     }
+  }
 }
 
 .article--gold {
-    p {
-        a {
-        color: $gold;
-    } }
+  p {
+    a {
+      color: $gold;
+    }
+  }
 
-    h1, .information__data, .headline__link, .standfirst {
-        color: #121212;
-    }
-    .topper {
-        background-color: #FEF8F3;
-    }
-    .introduction {
-        background-color: $gold;
-    }
-    .information {
-
+  h1,
+  .information__data,
+  .headline__link,
+  .standfirst {
+    color: #121212;
+  }
+  .topper {
+    background-color: #fef8f3;
+  }
+  .introduction {
+    background-color: $gold;
+  }
+  .information {
     &__meta {
-        color: color.adjust($gold, $lightness: -50%);
+      color: color.adjust($gold, $lightness: -50%);
     }
+  }
+  .image {
+    &__background--brand {
+      background-color: $gold;
+    }
+  }
+  .caption {
+    &__header {
+      color: color.adjust($gold, $lightness: -10%);
+    }
+  }
 }
-    .image  {
-        &__background--brand {
-            background-color: $gold;
-        }
-    }
-    .caption {
-        &__header {
-            color: color.adjust($gold, $lightness: -10%);
-        }
-    }
-}
-
 
 .article--world-cup {
-    .topper {
+  .topper {
     &-container {
-        margin-top: 10px;
-        margin-bottom: 0px;
+      margin-top: 10px;
+      margin-bottom: 0px;
 
-        @include mq(wide) {
+      @include mq(wide) {
         top: 2.5vh;
-    }
+      }
 
-            img {
-                align-self: end;
-            }
+      img {
+        align-self: end;
+      }
     }
-}
+  }
 }
 
 .article--uk-election {
-        .topper {
+  .topper {
     &-container {
-        margin-top: 10px;
-        margin-bottom: 0px;
+      margin-top: 10px;
+      margin-bottom: 0px;
 
-        @include mq(wide) {
+      @include mq(wide) {
         top: 2.5vh;
-    }
+      }
 
-            img {
-                align-self: end;
-            }
+      img {
+        align-self: end;
+      }
     }
+  }
 }
+
+.article--nomow {
+  p {
+    a {
+      color: $green;
+    }
+  }
+  .topper {
+    background-color: $green;
+  }
+  .introduction {
+    background-color: color.adjust(
+      $green,
+      $hue: 5deg,
+      $saturation: -5%,
+      $lightness: -12.5%
+    );
+  }
+  .headline {
+    &__link {
+      &:hover {
+        color: color.adjust(
+          $green,
+          $hue: 5deg,
+          $saturation: -5%,
+          $lightness: -30%
+        );
+      }
+    }
+  }
+  .information {
+    &__meta {
+      color: color.adjust(
+        $green,
+        $hue: 5deg,
+        $saturation: -5%,
+        $lightness: -30%
+      );
+    }
+  }
+  .image {
+    &__background--brand {
+      background-color: $green;
+    }
+  }
+  .caption {
+    &__header {
+      color: color.adjust($green, $lightness: -10%);
+    }
+  }
 }
