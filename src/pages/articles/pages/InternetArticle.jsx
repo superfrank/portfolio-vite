@@ -1,4 +1,5 @@
 import Logo from "../../../components/Logo";
+import useIsMobile from "../../../hooks/useIsMobile";
 import ArticleTemplate from "../components/ArticleTemplate";
 import ArticleIntro from "../components/ArticleIntro";
 import ArticleText from "../components/ArticleText";
@@ -8,8 +9,9 @@ import ArticleMediaVideo from "../components/ArticleMediaVideo";
 import ArticleMediaSplitMedium from "../components/ArticleMediaSplitMedium";
 import ArticleMediaSplitSmall from "../components/ArticleMediaSplitSmall";
 import ArticleCaptionHand from "../components/ArticleCaptionHand";
+import ArticleData from "../components/ArticleData";
+import CustomTopperInternet from "../components/internet/CustomTopperInternet";
 import MickeyHand from "../../../components/MickeyHand";
-import useIsMobile from "../../../hooks/useIsMobile";
 
 // Assets
 import internetResearchImage from "../../../assets/articles/internet/article/research.jpg";
@@ -35,6 +37,8 @@ import internetRussiaPoster from "../../../assets/articles/internet/media/poster
 import internetRussiaImageTwo from "../../../assets/articles/internet/article/internet-russia-2.png";
 import internetRussiaEyeTwoGif from "../../../assets/articles/internet/article/russia-eye-2.gif";
 import internetRussiaEyeThreeGif from "../../../assets/articles/internet/article/russia-eye-3.gif";
+import internetDataOneImage from "../../../assets/articles/internet/article/data-1.png";
+import internetDataTwoImage from "../../../assets/articles/internet/article/data-2.png";
 
 const InternetArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -44,20 +48,12 @@ const InternetArticle = ({ article }) => {
   return (
     <ArticleTemplate className="article--internet">
       <Logo href="/" context="article" theme={article.theme} />
-      <div className="topper wrapper">
-        <div className="topper-container">
-          <img
-            className="topper-image__mobile mobile"
-            src={topper.mobileSrc}
-            alt={topper.alt}
-          />
-          <img
-            className="topper-image__desktop desktop"
-            src={topper.desktopSrc}
-            alt={topper.alt}
-          />
-        </div>
-      </div>
+
+      <CustomTopperInternet
+        mobileSrc={topper.mobileSrc}
+        desktopSrc={topper.desktopSrc}
+        alt={topper.alt}
+      />
 
       <ArticleIntro>
         <div className="information grid__1-4">
@@ -116,19 +112,12 @@ const InternetArticle = ({ article }) => {
       </ArticleIntro>
 
       <section className="content wrapper">
+        <ArticleText body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
+
         <ArticleMediaImage
           src={internetResearchImage}
           alt="A collection of technology research and sketches"
-        />
-
-        <ArticleText body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
-
-        <ArticleMediaVideo
-          mp4={internetIndiaVideoMp4}
-          webm={internetIndiaVideoWebm}
-          poster={internetIndiaPoster}
-          background="brand"
-          mask="brand"
+          background="none"
         />
 
         <ArticleTextWithHeader
@@ -138,11 +127,26 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
+        <ArticleMediaVideo
+          mp4={internetIndiaVideoMp4}
+          webm={internetIndiaVideoWebm}
+          poster={internetIndiaPoster}
+          background="brand"
+          mask="brand"
+        />
+
         <ArticleCaptionHand
           imageSrc={internetIndiaImageTwo}
           imageAlt="An illustration of WhatsApp chat bubbles"
           title="Extra touch"
           body="The time of the messages was set to the reader's computer time"
+        />
+
+        <ArticleTextWithHeader
+          heading="China"
+          paragraphs={[
+            "In China, Weibo dominates in place of blocked pages like Google and Twitter. I included elements throughout this section which referenced the site's animated icons and the flickering of neon signs that are synonymous with East Asia.",
+          ]}
         />
 
         <ArticleMediaVideo
@@ -170,11 +174,11 @@ const InternetArticle = ({ article }) => {
             poster={internetChinaPosterTwo}
           />
         </div>
-
         <ArticleTextWithHeader
-          heading="China"
+          heading="Cuba"
           paragraphs={[
-            "In China, Weibo dominates in place of blocked pages like Google and Twitter. I included elements throughout this section which referenced the site's animated icons and the flickering of neon signs that are synonymous with East Asia.",
+            'Over in Cuba, access to the internet is limited and expensive. Locals receive delivery of media through an external hard drive known as "The Weekly Packet".',
+            'This was where the idea for pixelated design came from; screenshots of "The Weekly Packet" showed it running on an old version of Windows. The design was inspired by how Windows 3.11 looked and functioned.',
           ]}
         />
 
@@ -187,10 +191,18 @@ const InternetArticle = ({ article }) => {
         />
 
         <ArticleTextWithHeader
-          heading="Cuba"
+          heading="Russia"
           paragraphs={[
-            'Over in Cuba, access to the internet is limited and expensive. Locals receive delivery of media through an external hard drive known as "The Weekly Packet".',
-            'This was where the idea for pixelated design came from; screenshots of "The Weekly Packet" showed it running on an old version of Windows. The design was inspired by how Windows 3.11 looked and functioned.',
+            <>
+              Meanwhile in Russia, the Government promotes local companies such
+              as Vkontakte (a popular Facebook-like social network). Their
+              relationship is controversial:{" "}
+              <a href="https://www.theguardian.com/world/2018/sep/01/young-russians-posting-memes-face-jail-for-extremism">
+                a handful of users were charged with extremism
+              </a>{" "}
+              after police searched their online accounts for political content.
+            </>,
+            "This section included additional features such as the reader being able to 'like' each post, add The Kremlin as a 'friend' and an animation of 1984-style eyes watching.",
           ]}
         />
 
@@ -227,18 +239,42 @@ const InternetArticle = ({ article }) => {
         </div>
 
         <ArticleTextWithHeader
-          heading="Russia"
+          heading="Outcome"
           paragraphs={[
             <>
-              Meanwhile in Russia, the Government promotes local companies such
-              as Vkontakte (a popular Facebook-like social network). Their
-              relationship is controversial:{" "}
-              <a href="https://www.theguardian.com/world/2018/sep/01/young-russians-posting-memes-face-jail-for-extremism">
-                a handful of users were charged with extremism
+              The project went on to win a{" "}
+              <a href="https://www.dandad.org/awards/professional/2019/graphic-design/231385/the-guardian-the-internet-but-not-as-we-know-it/">
+                D&AD Wooden Pencil
+              </a>
+              , an{" "}
+              <a href="https://www.snd.org/bodd/2020/02/07/2019-results/">
+                SND
+              </a>
+              , a{" "}
+              <a href="https://drive.google.com/file/d/1ap0x0l8s_VWTaHSKNThPWDptl0OZIgdz/view">
+                Malofiej
               </a>{" "}
-              after police searched their online accounts for political content.
+              and was featured in{" "}
+              <a href="https://www.creativereview.co.uk/the-guardian-brings-the-worlds-internet-use-to-life-in-animated-feature/">
+                Creative Review
+              </a>
+              .
             </>,
-            "This section included additional features such as the reader being able to 'like' each post, add The Kremlin as a 'friend' and an animation of 1984-style eyes watching.",
+            "I was particularly proud of the article's viewing time - over double the length for an average interactive. As the piece was visual and unusual, people were easily drawn in and enjoyed reading to the very end.",
+          ]}
+        />
+        <ArticleData
+          metrics={[
+            {
+              label: "Page views over 24 hours",
+              src: internetDataOneImage,
+              alt: "Page views data graphic",
+            },
+            {
+              label: "Median attention time over 24 hours",
+              src: internetDataTwoImage,
+              alt: "Median attention time data graphic",
+            },
           ]}
         />
       </section>

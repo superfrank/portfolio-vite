@@ -8,7 +8,7 @@ const getBackgroundClasses = (background) => {
   }
 
   if (background === "none") {
-    return "";
+    return "image__background image__background--none";
   }
 
   return "image__background";

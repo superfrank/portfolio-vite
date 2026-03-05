@@ -60,6 +60,12 @@
         max-width: 80%;
       }
     }
+    &__background--none {
+      .image__container {
+        padding-top: 0vw;
+        padding-bottom: 0vw;
+      }
+    }
     &__square {
       max-width: 70%;
     }
@@ -140,16 +146,27 @@
     @include mq(desktop) {
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 1.5vw;
-      margin-bottom: 5vw;
+      margin-bottom: 3.5vw;
       // margin-top: 2vw;
     }
     &__header {
+      margin-bottom: 16px;
       @include mq(desktop) {
+        margin-bottom: 0px;
         grid-column: 1 / span 1;
         margin-top: -0.5vw;
       }
     }
   }
+
+  .text--with-header {
+    margin-top: 5.6rem;
+
+    @include mq(desktop) {
+      margin-top: 5vw;
+    }
+  }
+
   .grid:first-of-type {
     .text {
       margin-top: 0;

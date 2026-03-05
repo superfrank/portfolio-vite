@@ -8,7 +8,9 @@ const ArticleTextWithHeader = ({
   bodyGridClass = "grid__2-3",
 }) => {
   const rowClasses = ["grid", "item", rowClassName].filter(Boolean).join(" ");
-  const textClasses = ["text", gridClass, className].filter(Boolean).join(" ");
+  const textClasses = ["text", "text--with-header", gridClass, className]
+    .filter(Boolean)
+    .join(" ");
   const headerClasses = ["text__header", headerGridClass]
     .filter(Boolean)
     .join(" ");
