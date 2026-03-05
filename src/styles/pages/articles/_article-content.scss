@@ -216,9 +216,13 @@
       }
     }
     &__header {
-      color: $brand-1;
+      color: $black;
       display: inline-block;
       margin-bottom: 0px;
+      font-size: $font-size-five;
+      @include mq(desktop) {
+        font-size: $font-size-two;
+      }
     }
     &__header--hand {
       @include mq(desktop) {
