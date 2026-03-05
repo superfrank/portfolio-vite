@@ -1,6 +1,6 @@
 const ArticleTextWithHeader = ({
   heading,
-  body,
+  paragraphs = [],
   rowClassName = "",
   className = "",
   gridClass = "grid__1-3",
@@ -18,7 +18,11 @@ const ArticleTextWithHeader = ({
     <div className={rowClasses}>
       <div className={textClasses}>
         <h2 className={headerClasses}>{heading}</h2>
-        <p className={bodyClasses}>{body}</p>
+        {paragraphs.map((paragraph, index) => (
+          <p className={bodyClasses} key={`${heading}-${index}`}>
+            {paragraph}
+          </p>
+        ))}
       </div>
     </div>
   );

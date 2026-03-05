@@ -1,5 +1,15 @@
-const MickeyHand = ({ className = "", direction = "up" }) => {
-  const rotation = direction === "right" ? 90 : 0;
+const DIRECTION_ROTATION = {
+  up: 0,
+  right: 90,
+  down: 180,
+  left: -90,
+};
+
+const MickeyHand = ({ className = "", direction = "up", flipX = false }) => {
+  const centerX = 262.19;
+  const centerY = 312.53;
+  const rotation = DIRECTION_ROTATION[direction] ?? DIRECTION_ROTATION.up;
+  const xScale = flipX ? -1 : 1;
 
   return (
     <svg
@@ -11,7 +21,13 @@ const MickeyHand = ({ className = "", direction = "up" }) => {
       role="img"
       aria-label="Decorative pointing hand"
     >
-      <g transform={`rotate(${rotation} 262.19 312.53)`} id="mickey-verticle">
+      <g
+        transform={`translate(${centerX} ${centerY}) rotate(${rotation}) translate(${-centerX} ${-centerY})`}
+      >
+        <g
+          transform={`translate(${centerX} ${centerY}) scale(${xScale} 1) translate(${-centerX} ${-centerY})`}
+          id="mickey-verticle"
+        >
         <path
           className="mickey-hand__white"
           d="M339.43 277.71c-26.63-48-24.77-103-20.68-155.59 2.66-34.19 3.67-110.56-48.24-110-61.08.62-50.92 115.07-44.59 163.34 5.45 41.58 32.61 150.89-17.39 175.81-22.17 11.06-59.13-9.41-80.8-16.73-25.45-8.61-56.48-11.22-80.91 2.23-21.29 11.72-39.23 34.4-33.93 59.65 6.69 31.94 35.38 39.31 64 39.14 26.15-.16 52.43-5.1 77.31 5.66 29.27 12.66 46.63 41.37 70.62 61 46.54 38.12 108.93 53.78 167 35.64 63.52-19.86 100.84-74.07 113.63-137.33 6.3-31.17 10.17-67 3.25-98.35-6.79-30.76-33.14-65.38-69-57.11"
@@ -36,6 +52,7 @@ const MickeyHand = ({ className = "", direction = "up" }) => {
         <path
           d="M349.79 271.66c-6.19-11.37-10.07-24.66-13.5-38.38a294 294 0 01-7.86-44.57l-3.52 8.49c15.43-16.68 40.86-11.38 57.37 2.88 21 18.11 33.91 45.18 39.74 71.9a149.73 149.73 0 012.2 48.47h24l.54-5.07c.68-6.45-6-12-12-12-7.06 0-11.32 5.53-12 12l-.54 5.07c-.68 6.46 6 12 12 12 7.08 0 11.28-5.53 12-12 5.28-47.5-10.66-101.4-46-134.7-17.87-16.82-41.55-26.45-66.15-21.47-10.28 2.08-20.53 7.35-27.49 15.28-4.47 5.11-4.13 10-3.4 16.19s1.58 12.15 2.6 18.19c4 23.67 9.74 48.58 21.31 69.83 7.39 13.57 28.12 1.47 20.73-12.11z"
         />
+        </g>
       </g>
     </svg>
   );
