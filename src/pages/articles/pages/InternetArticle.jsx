@@ -5,10 +5,13 @@ import ArticleText from "../components/ArticleText";
 import ArticleTextWithHeader from "../components/ArticleTextWithHeader";
 import ArticleMediaImage from "../components/ArticleMediaImage";
 import ArticleMediaVideo from "../components/ArticleMediaVideo";
-import ArticleMediaSplitVideo from "../components/ArticleMediaSplitVideo";
+import ArticleMediaSplitMedium from "../components/ArticleMediaSplitMedium";
+import ArticleMediaSplitSmall from "../components/ArticleMediaSplitSmall";
 import ArticleCaptionHand from "../components/ArticleCaptionHand";
 import MickeyHand from "../../../components/MickeyHand";
 import useIsMobile from "../../../hooks/useIsMobile";
+
+// Assets
 import internetResearchImage from "../../../assets/articles/internet/article/research.jpg";
 import internetIndiaImageTwo from "../../../assets/articles/internet/article/image-2.png";
 import internetIndiaVideoMp4 from "../../../assets/articles/internet/media/internet-india.mp4";
@@ -150,18 +153,23 @@ const InternetArticle = ({ article }) => {
           mask="brand"
         />
 
-        <ArticleMediaSplitVideo
-          leftVideo={{
-            mp4: internetChinaVideoThreeMp4,
-            webm: internetChinaVideoThreeWebm,
-            poster: internetChinaPosterThree,
-          }}
-          rightVideo={{
-            mp4: internetChinaVideoTwoMp4,
-            webm: internetChinaVideoTwoWebm,
-            poster: internetChinaPosterTwo,
-          }}
-        />
+        <div className="grid item">
+          <ArticleMediaSplitSmall
+            position="mid-left"
+            type="video"
+            mp4={internetChinaVideoThreeMp4}
+            webm={internetChinaVideoThreeWebm}
+            poster={internetChinaPosterThree}
+          />
+
+          <ArticleMediaSplitMedium
+            side="right"
+            type="video"
+            mp4={internetChinaVideoTwoMp4}
+            webm={internetChinaVideoTwoWebm}
+            poster={internetChinaPosterTwo}
+          />
+        </div>
 
         <ArticleTextWithHeader
           heading="China"
@@ -192,6 +200,46 @@ const InternetArticle = ({ article }) => {
           poster={internetRussiaPoster}
           background="brand"
           mask="brand"
+        />
+
+        <div className="grid item">
+          <ArticleMediaSplitMedium
+            side="left"
+            type="image"
+            src={internetRussiaImageTwo}
+            alt="An illustration of VK"
+          />
+
+          <ArticleMediaSplitSmall
+            position="mid-right"
+            align="end"
+            type="image"
+            src={internetRussiaEyeThreeGif}
+            alt="A moving eye"
+          />
+
+          <ArticleMediaSplitSmall
+            position="right"
+            type="image"
+            src={internetRussiaEyeTwoGif}
+            alt="A blinking eye"
+          />
+        </div>
+
+        <ArticleTextWithHeader
+          heading="Russia"
+          paragraphs={[
+            <>
+              Meanwhile in Russia, the Government promotes local companies such
+              as Vkontakte (a popular Facebook-like social network). Their
+              relationship is controversial:{" "}
+              <a href="https://www.theguardian.com/world/2018/sep/01/young-russians-posting-memes-face-jail-for-extremism">
+                a handful of users were charged with extremism
+              </a>{" "}
+              after police searched their online accounts for political content.
+            </>,
+            "This section included additional features such as the reader being able to 'like' each post, add The Kremlin as a 'friend' and an animation of 1984-style eyes watching.",
+          ]}
         />
       </section>
     </ArticleTemplate>
