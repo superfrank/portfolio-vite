@@ -7,7 +7,8 @@ import TextWithHeader from "../components/TextWithHeader";
 import ImageLarge from "../components/ImageLarge";
 import MediaVideo from "../components/MediaVideo";
 import ImageMedium from "../components/ImageMedium";
-import MediaSplitSmall from "../components/MediaSplitSmall";
+import ImageSmall from "../components/ImageSmall";
+import VideoSmall from "../components/VideoSmall";
 import VideoMedium from "../components/VideoMedium";
 import CaptionHand from "../components/CaptionHand";
 import Data from "../components/Data";
@@ -159,9 +160,8 @@ const InternetArticle = ({ article }) => {
         />
 
         <div className="grid item">
-          <MediaSplitSmall
+          <VideoSmall
             position="mid-left"
-            type="video"
             mp4={internetChinaVideoThreeMp4}
             webm={internetChinaVideoThreeWebm}
             poster={internetChinaPosterThree}
@@ -223,17 +223,15 @@ const InternetArticle = ({ article }) => {
             background="brand"
           />
 
-          <MediaSplitSmall
+          <ImageSmall
             position="mid-right"
             align="end"
-            type="image"
             src={internetRussiaEyeThreeGif}
             alt="A moving eye"
           />
 
-          <MediaSplitSmall
+          <ImageSmall
             position="right"
-            type="image"
             src={internetRussiaEyeTwoGif}
             alt="A blinking eye"
           />
