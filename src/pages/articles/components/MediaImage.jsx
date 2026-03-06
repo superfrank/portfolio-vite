@@ -19,8 +19,8 @@ const getMaskClass = (mask) => {
     return "image__mask--brand";
   }
 
-  if (mask === "brand-mobile") {
-    return "image__mask--brand--mobile";
+  if (mask === "brand-phone") {
+    return "image__mask--brand-phone";
   }
 
   return "image__mask";

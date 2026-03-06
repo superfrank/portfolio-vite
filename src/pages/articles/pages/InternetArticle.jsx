@@ -6,8 +6,9 @@ import Text from "../components/Text";
 import TextWithHeader from "../components/TextWithHeader";
 import MediaImage from "../components/MediaImage";
 import MediaVideo from "../components/MediaVideo";
-import MediaSplitMedium from "../components/MediaSplitMedium";
+import ImageMedium from "../components/ImageMedium";
 import MediaSplitSmall from "../components/MediaSplitSmall";
+import VideoMedium from "../components/VideoMedium";
 import CaptionHand from "../components/CaptionHand";
 import Data from "../components/Data";
 import CustomTopperInternet from "../components/internet/CustomTopperInternet";
@@ -166,9 +167,8 @@ const InternetArticle = ({ article }) => {
             poster={internetChinaPosterThree}
           />
 
-          <MediaSplitMedium
+          <VideoMedium
             side="right"
-            type="video"
             mp4={internetChinaVideoTwoMp4}
             webm={internetChinaVideoTwoWebm}
             poster={internetChinaPosterTwo}
@@ -215,11 +215,12 @@ const InternetArticle = ({ article }) => {
         />
 
         <div className="grid item">
-          <MediaSplitMedium
+          <ImageMedium
             side="left"
-            type="image"
             src={internetRussiaImageTwo}
             alt="An illustration of VK"
+            mask="phone"
+            background="brand"
           />
 
           <MediaSplitSmall
