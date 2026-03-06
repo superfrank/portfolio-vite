@@ -5,7 +5,7 @@ import Intro from "../components/Intro";
 import Text from "../components/Text";
 import TextWithHeader from "../components/TextWithHeader";
 import ImageLarge from "../components/ImageLarge";
-import MediaVideo from "../components/MediaVideo";
+import VideoLarge from "../components/VideoLarge";
 import ImageMedium from "../components/ImageMedium";
 import ImageSmall from "../components/ImageSmall";
 import VideoSmall from "../components/VideoSmall";
@@ -129,7 +129,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <MediaVideo
+        <VideoLarge
           mp4={internetIndiaVideoMp4}
           webm={internetIndiaVideoWebm}
           poster={internetIndiaPoster}
@@ -151,7 +151,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <MediaVideo
+        <VideoLarge
           mp4={internetChinaVideoMp4}
           webm={internetChinaVideoWebm}
           poster={internetChinaPoster}
@@ -182,7 +182,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <MediaVideo
+        <VideoLarge
           mp4={internetCubaVideoMp4}
           webm={internetCubaVideoWebm}
           poster={internetCubaPoster}
@@ -206,7 +206,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <MediaVideo
+        <VideoLarge
           mp4={internetRussiaVideoMp4}
           webm={internetRussiaVideoWebm}
           poster={internetRussiaPoster}
@@ -259,7 +259,7 @@ const InternetArticle = ({ article }) => {
               </a>
               .
             </>,
-            "I was particularly proud of the article's viewing time - over double the length for an average interactive. As the piece was visual and unusual, people were easily drawn in and enjoyed reading to the very end.",
+            "I was particularly proud of the article's attention time - over double the length for an average interactive. As the piece was visual and unusual, people were easily drawn in and enjoyed reading to the very end.",
           ]}
         />
         <Data
