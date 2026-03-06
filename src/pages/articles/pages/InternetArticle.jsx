@@ -118,7 +118,7 @@ const InternetArticle = ({ article }) => {
 
         <ImageLarge
           src={internetResearchImage}
-          alt="A collection of technology research and sketches"
+          alt="Early sketches and visual references used during concept development"
           background="none"
         />
 
