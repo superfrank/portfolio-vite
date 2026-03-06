@@ -1,4 +1,4 @@
-const ArticleIntro = ({ className = "", children }) => {
+const Intro = ({ className = "", children }) => {
   const classes = ["introduction", "wrapper", className].filter(Boolean).join(" ");
 
   return (
@@ -8,4 +8,4 @@ const ArticleIntro = ({ className = "", children }) => {
   );
 };
 
-export default ArticleIntro;
+export default Intro;

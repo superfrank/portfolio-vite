@@ -73,7 +73,7 @@ const getMediumClass = ({ type, framed, device }) => {
   return type === "video" ? `${floatingClass} video` : floatingClass;
 };
 
-const ArticleMediaSplitMedium = ({
+const MediaSplitMedium = ({
   side = "left",
   type = "image",
   src,
@@ -134,4 +134,4 @@ const ArticleMediaSplitMedium = ({
   return <div className={rootClasses}>{withContainer}</div>;
 };
 
-export default ArticleMediaSplitMedium;
+export default MediaSplitMedium;

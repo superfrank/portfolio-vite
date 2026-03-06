@@ -1,6 +1,6 @@
 import MickeyHand from "../../../components/MickeyHand";
 
-const ArticleCaptionHand = ({
+const CaptionHand = ({
   imageSrc,
   imageAlt,
   title = "Extra touch",
@@ -35,4 +35,4 @@ const ArticleCaptionHand = ({
   );
 };
 
-export default ArticleCaptionHand;
+export default CaptionHand;

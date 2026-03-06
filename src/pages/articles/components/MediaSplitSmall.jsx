@@ -30,7 +30,7 @@ const getAlignClass = (align) => {
   return "";
 };
 
-const ArticleMediaSplitSmall = ({
+const MediaSplitSmall = ({
   position = "left",
   align = "",
   type = "image",
@@ -83,4 +83,4 @@ const ArticleMediaSplitSmall = ({
   );
 };
 
-export default ArticleMediaSplitSmall;
+export default MediaSplitSmall;

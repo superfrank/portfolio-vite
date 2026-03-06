@@ -1,4 +1,4 @@
-const ArticleText = ({
+const Text = ({
   body,
   rowClassName = "",
   className = "",
@@ -18,4 +18,4 @@ const ArticleText = ({
   );
 };
 
-export default ArticleText;
+export default Text;

@@ -1,6 +1,6 @@
 import Logo from "../../../components/Logo";
-import ArticleTemplate from "../components/ArticleTemplate";
-import ArticleIntro from "../components/ArticleIntro";
+import Template from "../components/Template";
+import Intro from "../components/Intro";
 import MickeyHand from "../../../components/MickeyHand";
 import useIsMobile from "../../../hooks/useIsMobile";
 
@@ -10,7 +10,7 @@ const NoMowArticle = ({ article }) => {
   const isMobile = useIsMobile();
 
   return (
-    <ArticleTemplate className="article--nomow">
+    <Template className="article--nomow">
       <Logo href="/" context="article" theme={article.theme} />
 
       <div className="topper wrapper">
@@ -28,7 +28,7 @@ const NoMowArticle = ({ article }) => {
         </div>
       </div>
 
-      <ArticleIntro>
+      <Intro>
         <div className="information grid__1-4">
           {[0, 1].map((copyIndex) => (
             <div className="marquee-move" key={`meta-row-${copyIndex}`}>
@@ -86,8 +86,8 @@ const NoMowArticle = ({ article }) => {
             {standfirst}
           </h3>
         ))}
-      </ArticleIntro>
-    </ArticleTemplate>
+      </Intro>
+    </Template>
   );
 };
 

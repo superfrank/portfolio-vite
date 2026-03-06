@@ -26,7 +26,7 @@ const getMaskClass = (mask) => {
   return "image__mask";
 };
 
-const ArticleMediaVideo = ({
+const MediaVideo = ({
   mp4,
   webm,
   poster,
@@ -77,4 +77,4 @@ const ArticleMediaVideo = ({
   );
 };
 
-export default ArticleMediaVideo;
+export default MediaVideo;

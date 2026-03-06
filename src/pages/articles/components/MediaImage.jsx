@@ -26,7 +26,7 @@ const getMaskClass = (mask) => {
   return "image__mask";
 };
 
-const ArticleMediaImage = ({
+const MediaImage = ({
   src,
   alt,
   rowClassName = "",
@@ -62,4 +62,4 @@ const ArticleMediaImage = ({
   );
 };
 
-export default ArticleMediaImage;
+export default MediaImage;

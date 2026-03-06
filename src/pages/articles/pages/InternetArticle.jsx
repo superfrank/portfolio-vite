@@ -1,15 +1,15 @@
 import Logo from "../../../components/Logo";
 import useIsMobile from "../../../hooks/useIsMobile";
-import ArticleTemplate from "../components/ArticleTemplate";
-import ArticleIntro from "../components/ArticleIntro";
-import ArticleText from "../components/ArticleText";
-import ArticleTextWithHeader from "../components/ArticleTextWithHeader";
-import ArticleMediaImage from "../components/ArticleMediaImage";
-import ArticleMediaVideo from "../components/ArticleMediaVideo";
-import ArticleMediaSplitMedium from "../components/ArticleMediaSplitMedium";
-import ArticleMediaSplitSmall from "../components/ArticleMediaSplitSmall";
-import ArticleCaptionHand from "../components/ArticleCaptionHand";
-import ArticleData from "../components/ArticleData";
+import Template from "../components/Template";
+import Intro from "../components/Intro";
+import Text from "../components/Text";
+import TextWithHeader from "../components/TextWithHeader";
+import MediaImage from "../components/MediaImage";
+import MediaVideo from "../components/MediaVideo";
+import MediaSplitMedium from "../components/MediaSplitMedium";
+import MediaSplitSmall from "../components/MediaSplitSmall";
+import CaptionHand from "../components/CaptionHand";
+import Data from "../components/Data";
 import CustomTopperInternet from "../components/internet/CustomTopperInternet";
 import MickeyHand from "../../../components/MickeyHand";
 
@@ -46,7 +46,7 @@ const InternetArticle = ({ article }) => {
   const isMobile = useIsMobile();
 
   return (
-    <ArticleTemplate className="article--internet">
+    <Template className="article--internet">
       <Logo href="/" context="article" theme={article.theme} />
 
       <CustomTopperInternet
@@ -55,7 +55,7 @@ const InternetArticle = ({ article }) => {
         alt={topper.alt}
       />
 
-      <ArticleIntro>
+      <Intro>
         <div className="information grid__1-4">
           {[0, 1].map((copyIndex) => (
             <div className="marquee-move" key={`meta-row-${copyIndex}`}>
@@ -109,25 +109,25 @@ const InternetArticle = ({ article }) => {
             {standfirst}
           </h3>
         ))}
-      </ArticleIntro>
+      </Intro>
 
       <section className="content wrapper">
-        <ArticleText body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
+        <Text body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
 
-        <ArticleMediaImage
+        <MediaImage
           src={internetResearchImage}
           alt="A collection of technology research and sketches"
           background="none"
         />
 
-        <ArticleTextWithHeader
+        <TextWithHeader
           heading="India"
           paragraphs={[
             "India is WhatsApp’s biggest market, with more than 200 million users. By starting with its familiar format, readers instantly knew this wasn’t a regular news article and started scrolling.",
           ]}
         />
 
-        <ArticleMediaVideo
+        <MediaVideo
           mp4={internetIndiaVideoMp4}
           webm={internetIndiaVideoWebm}
           poster={internetIndiaPoster}
@@ -135,21 +135,21 @@ const InternetArticle = ({ article }) => {
           mask="brand"
         />
 
-        <ArticleCaptionHand
+        <CaptionHand
           imageSrc={internetIndiaImageTwo}
           imageAlt="An illustration of WhatsApp chat bubbles"
           title="Extra touch"
           body="The time of the messages was set to the reader's computer time"
         />
 
-        <ArticleTextWithHeader
+        <TextWithHeader
           heading="China"
           paragraphs={[
             "In China, Weibo dominates in place of blocked pages like Google and Twitter. I included elements throughout this section which referenced the site's animated icons and the flickering of neon signs that are synonymous with East Asia.",
           ]}
         />
 
-        <ArticleMediaVideo
+        <MediaVideo
           mp4={internetChinaVideoMp4}
           webm={internetChinaVideoWebm}
           poster={internetChinaPoster}
@@ -158,7 +158,7 @@ const InternetArticle = ({ article }) => {
         />
 
         <div className="grid item">
-          <ArticleMediaSplitSmall
+          <MediaSplitSmall
             position="mid-left"
             type="video"
             mp4={internetChinaVideoThreeMp4}
@@ -166,7 +166,7 @@ const InternetArticle = ({ article }) => {
             poster={internetChinaPosterThree}
           />
 
-          <ArticleMediaSplitMedium
+          <MediaSplitMedium
             side="right"
             type="video"
             mp4={internetChinaVideoTwoMp4}
@@ -174,7 +174,7 @@ const InternetArticle = ({ article }) => {
             poster={internetChinaPosterTwo}
           />
         </div>
-        <ArticleTextWithHeader
+        <TextWithHeader
           heading="Cuba"
           paragraphs={[
             'Over in Cuba, access to the internet is limited and expensive. Locals receive delivery of media through an external hard drive known as "The Weekly Packet".',
@@ -182,7 +182,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <ArticleMediaVideo
+        <MediaVideo
           mp4={internetCubaVideoMp4}
           webm={internetCubaVideoWebm}
           poster={internetCubaPoster}
@@ -190,7 +190,7 @@ const InternetArticle = ({ article }) => {
           mask="brand"
         />
 
-        <ArticleTextWithHeader
+        <TextWithHeader
           heading="Russia"
           paragraphs={[
             <>
@@ -206,7 +206,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
 
-        <ArticleMediaVideo
+        <MediaVideo
           mp4={internetRussiaVideoMp4}
           webm={internetRussiaVideoWebm}
           poster={internetRussiaPoster}
@@ -215,14 +215,14 @@ const InternetArticle = ({ article }) => {
         />
 
         <div className="grid item">
-          <ArticleMediaSplitMedium
+          <MediaSplitMedium
             side="left"
             type="image"
             src={internetRussiaImageTwo}
             alt="An illustration of VK"
           />
 
-          <ArticleMediaSplitSmall
+          <MediaSplitSmall
             position="mid-right"
             align="end"
             type="image"
@@ -230,7 +230,7 @@ const InternetArticle = ({ article }) => {
             alt="A moving eye"
           />
 
-          <ArticleMediaSplitSmall
+          <MediaSplitSmall
             position="right"
             type="image"
             src={internetRussiaEyeTwoGif}
@@ -238,7 +238,7 @@ const InternetArticle = ({ article }) => {
           />
         </div>
 
-        <ArticleTextWithHeader
+        <TextWithHeader
           heading="Outcome"
           paragraphs={[
             <>
@@ -263,7 +263,7 @@ const InternetArticle = ({ article }) => {
             "I was particularly proud of the article's viewing time - over double the length for an average interactive. As the piece was visual and unusual, people were easily drawn in and enjoyed reading to the very end.",
           ]}
         />
-        <ArticleData
+        <Data
           metrics={[
             {
               label: "Page views over 24 hours",
@@ -278,7 +278,7 @@ const InternetArticle = ({ article }) => {
           ]}
         />
       </section>
-    </ArticleTemplate>
+    </Template>
   );
 };
 

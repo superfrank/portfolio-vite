@@ -1,4 +1,4 @@
-const ArticleTextWithHeader = ({
+const TextWithHeader = ({
   heading,
   paragraphs = [],
   rowClassName = "",
@@ -30,4 +30,4 @@ const ArticleTextWithHeader = ({
   );
 };
 
-export default ArticleTextWithHeader;
+export default TextWithHeader;

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-const ArticleData = ({ metrics = [] }) => {
+const Data = ({ metrics = [] }) => {
   return (
     <div className="grid item">
       {metrics.map((metric, index) => (
@@ -20,4 +20,4 @@ const ArticleData = ({ metrics = [] }) => {
   );
 };
 
-export default ArticleData;
+export default Data;
