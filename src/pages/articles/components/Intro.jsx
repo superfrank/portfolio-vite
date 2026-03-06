@@ -1,8 +1,6 @@
-const Intro = ({ className = "", children }) => {
-  const classes = ["introduction", "wrapper", className].filter(Boolean).join(" ");
-
+const Intro = ({ children }) => {
   return (
-    <section className={classes}>
+    <section className={`introduction wrapper`}>
       <div className="item grid">{children}</div>
     </section>
   );

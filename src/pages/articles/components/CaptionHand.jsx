@@ -1,16 +1,8 @@
 import MickeyHand from "../../../components/MickeyHand";
 
-const CaptionHand = ({
-  imageSrc,
-  imageAlt,
-  title = "Extra touch",
-  body,
-  rowClassName = "",
-}) => {
-  const rowClasses = ["grid", "item", rowClassName].filter(Boolean).join(" ");
-
+const CaptionHand = ({ imageSrc, imageAlt, title = "Extra touch", body }) => {
   return (
-    <div className={rowClasses}>
+    <div className={`grid item`}>
       <div className="image image__caption grid__2-3">
         <div className="image__inline">
           <img className="image__two" src={imageSrc} alt={imageAlt} />

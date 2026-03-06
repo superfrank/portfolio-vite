@@ -1,18 +1,8 @@
-const Text = ({
-  body,
-  rowClassName = "",
-  className = "",
-  gridClass = "grid__1-3",
-  bodyGridClass = "grid__2-3",
-}) => {
-  const rowClasses = ["grid", "item", rowClassName].filter(Boolean).join(" ");
-  const textClasses = ["text", gridClass, className].filter(Boolean).join(" ");
-  const bodyClasses = ["text__body", bodyGridClass].filter(Boolean).join(" ");
-
+const Text = ({ body }) => {
   return (
-    <div className={rowClasses}>
-      <div className={textClasses}>
-        <p className={bodyClasses}>{body}</p>
+    <div className={`grid item`}>
+      <div className={`text grid__1-3`}>
+        <p className={`grid__2-3`}>{body}</p>
       </div>
     </div>
   );
