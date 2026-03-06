@@ -4,7 +4,7 @@ import Template from "../components/Template";
 import Intro from "../components/Intro";
 import Text from "../components/Text";
 import TextWithHeader from "../components/TextWithHeader";
-import MediaImage from "../components/MediaImage";
+import ImageLarge from "../components/ImageLarge";
 import MediaVideo from "../components/MediaVideo";
 import ImageMedium from "../components/ImageMedium";
 import MediaSplitSmall from "../components/MediaSplitSmall";
@@ -115,7 +115,7 @@ const InternetArticle = ({ article }) => {
       <section className="content wrapper">
         <Text body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
 
-        <MediaImage
+        <ImageLarge
           src={internetResearchImage}
           alt="A collection of technology research and sketches"
           background="none"

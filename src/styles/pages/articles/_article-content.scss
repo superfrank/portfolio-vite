@@ -61,9 +61,12 @@
       }
     }
     &__background--none {
+      overflow: visible;
       .image__container {
-        padding-top: 0vw;
-        padding-bottom: 0vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        margin-top: -5vw;
+        margin-bottom: -5vw;
       }
     }
     &__square {
