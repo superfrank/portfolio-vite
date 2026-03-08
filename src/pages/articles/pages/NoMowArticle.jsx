@@ -13,18 +13,30 @@ const NoMowArticle = ({ article }) => {
     <Template className="article--nomow">
       <Logo href="/" context="article" theme={article.theme} />
 
-      <div className="topper wrapper">
+      <div className="topper">
         <div className="topper-container">
-          <img
+          <video
             className="topper-image__mobile mobile"
-            src={topper.mobileSrc}
-            alt={topper.alt}
-          />
-          <img
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={topper.alt}
+          >
+            <source src={topper.mobileSrc} type="video/mp4" />
+          </video>
+          <video
             className="topper-image__desktop desktop"
-            src={topper.desktopSrc}
-            alt={topper.alt}
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={topper.alt}
+          >
+            <source src={topper.desktopSrc} type="video/mp4" />
+          </video>
         </div>
       </div>
 

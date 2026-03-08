@@ -2,7 +2,8 @@ import InternetArticle from "./pages/InternetArticle";
 import NoMowArticle from "./pages/NoMowArticle";
 import internetHeaderImageMobile from "../../assets/articles/internet/header-image-background__mobile.png";
 import internetHeaderImageDesktop from "../../assets/articles/internet/article/header-image-background__desktop.png";
-import noMowHeaderImage from "../../assets/nomow/home/promo-video.jpg";
+import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
+import noMowTopperVideoDesktop from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
 
 const internetLiveLink =
   "https://www.theguardian.com/technology/ng-interactive/2019/jan/11/the-internet-but-not-as-we-know-it-life-online-in-china-russia-cuba-and-india";
@@ -53,8 +54,8 @@ export const articleConfig = {
     theme: "nomow",
     component: NoMowArticle,
     topper: {
-      mobileSrc: noMowHeaderImage,
-      desktopSrc: noMowHeaderImage,
+      mobileSrc: noMowTopperVideoMobile,
+      desktopSrc: noMowTopperVideoDesktop,
       alt: "No Mow article topper",
     },
     intro: {

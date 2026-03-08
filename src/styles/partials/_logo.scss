@@ -64,6 +64,12 @@
   }
 }
 
+.logo--theme-nomow {
+  .logo__link:hover #frames {
+    fill: colors.$green;
+  }
+}
+
 // .logo--theme-election {
 //   .logo__link:hover #frames {
 //     fill: #00b2ff;
