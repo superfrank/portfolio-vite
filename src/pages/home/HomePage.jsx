@@ -1,6 +1,6 @@
 import AboutIntro from "./components/AboutIntro";
 import FeaturedProject from "./components/FeaturedProject";
-import noMowVideo from "../../assets/nomow/home/promo-video.mp4";
+import noMowVideo from "../../assets/nomow/home/nomow-hp.mp4";
 import noMowPoster from "../../assets/nomow/home/promo-video.jpg";
 import ProjectsList from "./components/ProjectsList";
 import ContactLinks from "../../components/layout/ContactLinks";
