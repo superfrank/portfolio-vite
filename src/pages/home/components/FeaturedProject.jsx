@@ -50,7 +50,7 @@ const FeaturedProject = ({
 
         <div className="featured-project__media-backdrop" />
       </div>
-      <a href="https://wapo.st/4tq6tGr" className="featured-project__title">
+      <a href="/nomow" className="featured-project__title">
         <MickeyHand
           className="featured-project__mickey-hand featured-project__mickey-hand--desktop"
           direction="right"

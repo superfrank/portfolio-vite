@@ -12,7 +12,7 @@ const ImageMedium = ({
       ? "image__background--brand"
       : background === "white"
         ? "image__background--white"
-        : "";
+        : "image__background--none";
   const containerClassName = isPhoneMask ? "image__container--phone" : "";
   const maskClassName =
     background === "brand"
@@ -23,10 +23,16 @@ const ImageMedium = ({
   const imageClassName = isPhoneMask ? "image__floating--phone" : "";
 
   return (
-    <div className={`image ${sideClassName} image__background ${backgroundClassName}`}>
+    <div
+      className={`image ${sideClassName} image__background ${backgroundClassName}`}
+    >
       <div className={`image__container ${containerClassName}`}>
         <div className={`image__mask ${maskClassName}`}>
-          <img className={`image__floating ${imageClassName}`} src={src} alt={alt} />
+          <img
+            className={`image__floating ${imageClassName}`}
+            src={src}
+            alt={alt}
+          />
         </div>
       </div>
     </div>

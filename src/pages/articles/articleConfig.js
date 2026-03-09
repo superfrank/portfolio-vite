@@ -33,7 +33,7 @@ export const articleConfig = {
         {
           key: "role",
           label: "Role",
-          value: "Art Direction, Design, Illustration, Front-end",
+          value: "Art Direction, Design, Illustration, Development",
         },
         {
           key: "award",
@@ -68,11 +68,12 @@ export const articleConfig = {
         {
           key: "role",
           label: "Role",
-          value: "Pitched idea, Built models, Design, Front-end",
+          value: "Pitched idea, Built models, Design, Development",
         },
       ],
       standfirst: [
-        "An immersive 3D feature to show what happens when you stop mowing your lawn",
+        "My parents are keen gardeners, who like everything neatly pruned. So when my dad stopped mowing the lawn and let it grow wild, it caught me by surprise.",
+        "It became the starting point for my pitch to the climate team about the “No mow movement”. I wanted to focus on how it could have an impact on even a tiny square of grass.",
       ],
     },
   },

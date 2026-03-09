@@ -3,6 +3,26 @@ import Template from "../components/Template";
 import Intro from "../components/Intro";
 import MickeyHand from "../../../components/MickeyHand";
 import useIsMobile from "../../../hooks/useIsMobile";
+import Text from "../components/Text";
+import TextWithHeader from "../components/TextWithHeader";
+import ImageLarge from "../components/ImageLarge";
+import VideoLarge from "../components/VideoLarge";
+import ImageMedium from "../components/ImageMedium";
+import ImageSmall from "../components/ImageSmall";
+import VideoSmall from "../components/VideoSmall";
+import VideoMedium from "../components/VideoMedium";
+import CaptionHand from "../components/CaptionHand";
+import Data from "../components/Data";
+
+// Assets
+import internetIndiaImageTwo from "../../../assets/articles/internet/article/image-2.png";
+import noMowDandelionVideoMp4 from "../../../assets/articles/nomow/article/no-mow-article-video-1-720-25.mp4";
+import noMowDandelionPoster from "../../../assets/articles/nomow/article/no-mow-article-video-1-poster.jpg";
+import noMowSketchesVideoMp4 from "../../../assets/articles/nomow/article/no-mow-sketches.mp4";
+import noMowSketchesPoster from "../../../assets/articles/nomow/article/no-mow-sketches-poster.jpg";
+import noMowStoryboard from "../../../assets/articles/nomow/article/no-mow-storyboard.jpg";
+import noMowBeeBalmBlender from "../../../assets/articles/nomow/article/no-mow-beebalm-blender.jpg";
+import noMowDandelionBlender from "../../../assets/articles/nomow/article/no-mow-dandelion-blender.jpg";
 
 const NoMowArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -99,6 +119,90 @@ const NoMowArticle = ({ article }) => {
           </h3>
         ))}
       </Intro>
+
+      <section className="content wrapper">
+        <Text
+          paragraphs={[
+            "I looked at dioramas, illustrative 3D models and minecraft as visual references and started sketching out rough ideas.",
+          ]}
+        />
+        <VideoLarge
+          mp4={noMowSketchesVideoMp4}
+          poster={noMowSketchesPoster}
+          background="none"
+        />
+
+        <Text
+          paragraphs={[
+            "The writer, Allyson Chiu and I chatted with naturalist, David Mizejewski to understand the no mow process. I storyboarded what would happen to your lawn each week and the tasks the reader should complete to have the perfect patch of grass.",
+          ]}
+        />
+
+        <ImageLarge
+          src={noMowStoryboard}
+          alt="Early storyboard"
+          background="none"
+        />
+
+        <Text
+          paragraphs={[
+            "Along with graphics reporter Simon Ducroquet, we started building out the 3D graphics. While Simon created the soil and grass, I jumped into Blender and began on the flowers. Starting off with the simpler models of a dandelion and white clover and moving onto the more complex (but beautifully named!) bee balm.",
+            "Once I was happy with the models, I built them into the article using React Three Fiber.",
+          ]}
+        />
+        <div className="grid grid--split-media--full item">
+          <ImageMedium
+            side="left"
+            src={noMowDandelionBlender}
+            alt="A 3D illustration of a dandelion"
+            mask="none"
+            background="none"
+          />
+          <ImageMedium
+            side="right"
+            src={noMowBeeBalmBlender}
+            alt="A 3D illustration of a beebalm"
+            mask="none"
+            background="none"
+          />
+        </div>
+        <VideoLarge
+          mp4={noMowDandelionVideoMp4}
+          poster={noMowDandelionPoster}
+          background="brand"
+          mask="brand"
+        />
+
+        <Text
+          paragraphs={[
+            "To keep things simple, we settled on five steps a reader could take. Beginning with letting grass grow to encourage biodiversity, and evolving towards planting native species that attract and support wildlife.",
+          ]}
+        />
+        <CaptionHand
+          imageSrc={internetIndiaImageTwo}
+          imageAlt="An illustration of WhatsApp chat bubbles"
+          title="Extra touch"
+          body="The flowers are randomly placed, making each experience unique, just like a real lawn"
+        />
+
+        <CaptionHand
+          imageSrc={internetIndiaImageTwo}
+          imageAlt="An illustration of WhatsApp chat bubbles"
+          title="Extra touch"
+          body="The dandelion leaves are randomly set between 2 and 8 and are spaced in a full circle"
+        />
+        <Text
+          paragraphs={[
+            "I created a model of a butterfly, sweat bee, earthworm and a blue jay to bring the grass patch to life. I animated the insects' wings in slow motion, accurately matching their natural speeds — like a butterfly’s gentle 10 flaps per second and a sweat bee’s rapid 250.",
+          ]}
+        />
+
+        <Text
+          paragraphs={[
+            "I built a scrolly header where the grass grows as you scroll, pulling readers into the story and hinting at the lawn's upcoming transformation.",
+          ]}
+        />
+      </section>
     </Template>
   );
 };

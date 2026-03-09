@@ -114,7 +114,11 @@ const InternetArticle = ({ article }) => {
       </Intro>
 
       <section className="content wrapper">
-        <Text body="I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries." />
+        <Text
+          paragraphs={[
+            "I looked at censorship, chat messaging, the early internet and Big Brother as references. I chose to focus on pixel design in order to tie together four very different countries.",
+          ]}
+        />
 
         <ImageLarge
           src={internetResearchImage}
