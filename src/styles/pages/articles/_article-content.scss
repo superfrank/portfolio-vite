@@ -41,6 +41,7 @@
       background-color: $brand-1;
       margin-left: -10px;
       margin-right: -10px;
+      margin-bottom: 5vh;
 
       @include mq(desktop) {
         margin-left: 0px;
@@ -63,10 +64,16 @@
     &__background--none {
       overflow: visible;
       .image__container {
-        padding-top: 0vh;
-        padding-bottom: 5vh;
-        margin-top: -5vh;
-        margin-bottom: 5vh;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin-top: -4rem;
+        margin-bottom: 0;
+        @include mq(desktop) {
+          padding-top: 0vh;
+          padding-bottom: 0vh;
+          margin-top: -5vh;
+          margin-bottom: 5vh;
+        }
       }
     }
     &__square {
