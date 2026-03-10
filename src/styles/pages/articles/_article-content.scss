@@ -150,6 +150,12 @@
     }
   }
   .grid--split-media--full {
+    .grid__1-2 {
+      padding-bottom: 2rem;
+      @include mq(desktop) {
+        padding-bottom: 0;
+      }
+    }
     @include mq(desktop) {
       grid-column-gap: 5vh;
     }
@@ -165,6 +171,10 @@
         .image__container {
           padding-bottom: 0vh;
           margin-bottom: 0;
+          padding-top: 1rem;
+          @include mq(desktop) {
+            padding-top: 5vh;
+          }
         }
       }
     }
@@ -265,6 +275,7 @@
     &__body {
       width: 100%;
       display: block;
+      color: $dark-grey;
     }
   }
 
@@ -299,6 +310,15 @@
         animation: none;
       }
     }
+
+    &--vertical {
+      @include mq(desktop) {
+        margin-top: -4vh;
+        .svg__hand--desktop {
+          animation: mickey-extra-touch-nudge-y 3.8s ease-in-out infinite;
+        }
+      }
+    }
   }
 }
 
@@ -329,10 +349,10 @@
     transform: translate3d(0, 0, 0);
   }
   68% {
-    transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -1vw, 0);
   }
   80% {
-    transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -1vw, 0);
   }
   92% {
     transform: translate3d(0, 2px, 0);

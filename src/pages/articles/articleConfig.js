@@ -72,8 +72,8 @@ export const articleConfig = {
         },
       ],
       standfirst: [
-        "My parents are keen gardeners, who like everything neatly pruned. So when my dad stopped mowing the lawn and let it grow wild, it caught me by surprise.",
-        "It became the starting point for my pitch to the climate team about the “No mow movement”. I wanted to focus on how it could have an impact on even a tiny square of grass.",
+        "My parents are keen gardeners, who like everything neatly pruned. So when my dad suddenly stopped mowing the lawn and let it grow wild, I was more than a little surprised.",
+        "Over a cup of tea (and possibly a cheese sandwich) we chatted it through, and I discovered the “No Mow Movement”. This became the starting point for my pitch to the climate team.",
       ],
     },
   },

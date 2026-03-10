@@ -123,7 +123,7 @@ const NoMowArticle = ({ article }) => {
       <section className="content wrapper">
         <Text
           paragraphs={[
-            "I looked at dioramas, illustrative 3D models and minecraft as visual references and started sketching out rough ideas.",
+            "I wanted to focus on how it could have an impact on even a tiny square of grass. I looked at dioramas, illustrative 3D models and minecraft as visual references and started sketching out rough ideas.",
           ]}
         />
         <VideoLarge
@@ -150,6 +150,12 @@ const NoMowArticle = ({ article }) => {
             "Once I was happy with the models, I built them into the article using React Three Fiber.",
           ]}
         />
+        <VideoLarge
+          mp4={noMowDandelionVideoMp4}
+          poster={noMowDandelionPoster}
+          background="brand"
+          mask="brand"
+        />
         <div className="grid grid--split-media--full item">
           <ImageMedium
             side="left"
@@ -166,11 +172,11 @@ const NoMowArticle = ({ article }) => {
             background="none"
           />
         </div>
-        <VideoLarge
-          mp4={noMowDandelionVideoMp4}
-          poster={noMowDandelionPoster}
-          background="brand"
-          mask="brand"
+        <CaptionHand
+          captionGridClass="grid__1-2"
+          handMotion="vertical"
+          title="Extra touch"
+          body="I used instanced meshes to reuse a single petal model, allowing all 132 petals to share the same geometry and making the scene much more efficient to render."
         />
 
         <Text
@@ -183,13 +189,6 @@ const NoMowArticle = ({ article }) => {
           imageAlt="An illustration of WhatsApp chat bubbles"
           title="Extra touch"
           body="The flowers are randomly placed, making each experience unique, just like a real lawn"
-        />
-
-        <CaptionHand
-          imageSrc={internetIndiaImageTwo}
-          imageAlt="An illustration of WhatsApp chat bubbles"
-          title="Extra touch"
-          body="The dandelion leaves are randomly set between 2 and 8 and are spaced in a full circle"
         />
         <Text
           paragraphs={[
