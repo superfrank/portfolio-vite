@@ -7,6 +7,7 @@ import Text from "../components/Text";
 import TextWithHeader from "../components/TextWithHeader";
 import ImageLarge from "../components/ImageLarge";
 import VideoLarge from "../components/VideoLarge";
+import ImageStepsLarge from "../components/ImageStepsLarge";
 import ImageMedium from "../components/ImageMedium";
 import ImageSmall from "../components/ImageSmall";
 import VideoSmall from "../components/VideoSmall";
@@ -23,6 +24,9 @@ import noMowSketchesPoster from "../../../assets/articles/nomow/article/no-mow-s
 import noMowStoryboard from "../../../assets/articles/nomow/article/no-mow-storyboard.jpg";
 import noMowBeeBalmBlender from "../../../assets/articles/nomow/article/no-mow-beebalm-blender.jpg";
 import noMowDandelionBlender from "../../../assets/articles/nomow/article/no-mow-dandelion-blender.jpg";
+import noMowMobileStepOne from "../../../assets/articles/nomow/article/no-mow-mobile-step-1.jpg";
+import noMowMobileStepTwo from "../../../assets/articles/nomow/article/no-mow-mobile-step-2.jpg";
+import noMowMobileStepThree from "../../../assets/articles/nomow/article/no-mow-mobile-step-3.jpg";
 
 const NoMowArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -146,6 +150,25 @@ const NoMowArticle = ({ article }) => {
 
         <Text
           paragraphs={[
+            "To keep things simple, we settled on five steps a reader could take. Beginning with letting grass grow to encourage biodiversity, and evolving towards planting native species that attract and support wildlife.",
+          ]}
+        />
+        <ImageStepsLarge
+          steps={[
+            { src: noMowMobileStepOne, alt: "A patch of long grass" },
+            {
+              src: noMowMobileStepTwo,
+              alt: "That patch of grass being trimmed",
+            },
+            {
+              src: noMowMobileStepThree,
+              alt: "The grass being thinned out with a rake",
+            },
+          ]}
+        />
+
+        <Text
+          paragraphs={[
             "Along with graphics reporter Simon Ducroquet, we started building out the 3D graphics. While Simon created the soil and grass, I jumped into Blender and began on the flowers. Starting off with the simpler models of a dandelion and white clover and moving onto the more complex (but beautifully named!) bee balm.",
             "Once I was happy with the models, I built them into the article using React Three Fiber.",
           ]}
@@ -179,11 +202,6 @@ const NoMowArticle = ({ article }) => {
           body="I used instanced meshes to reuse a single petal model, allowing all 132 petals to share the same geometry and making the scene much more efficient to render."
         />
 
-        <Text
-          paragraphs={[
-            "To keep things simple, we settled on five steps a reader could take. Beginning with letting grass grow to encourage biodiversity, and evolving towards planting native species that attract and support wildlife.",
-          ]}
-        />
         <CaptionHand
           imageSrc={internetIndiaImageTwo}
           imageAlt="An illustration of WhatsApp chat bubbles"
