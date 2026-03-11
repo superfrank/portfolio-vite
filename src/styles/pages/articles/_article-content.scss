@@ -163,15 +163,35 @@
       padding-bottom: 2rem;
       @include mq(desktop) {
         padding-bottom: 0;
+        margin-bottom: 0;
       }
     }
     @include mq(desktop) {
       grid-column-gap: 2.5vw;
     }
-    .image__background--none .image__container,
     .image__background--none .image__container {
       @include mq(desktop) {
         max-width: 100%;
+      }
+    }
+
+    .image.grid__3-4.image__background--brand {
+      @include mq(desktop) {
+        aspect-ratio: 1 / 1;
+        margin-top: -2.5vw;
+      }
+
+      .image__container {
+        @include mq(desktop) {
+          height: 100%;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
     .image {
@@ -184,6 +204,13 @@
           @include mq(desktop) {
             padding-top: 5vw;
             margin-top: -7.5vw;
+          }
+        }
+      }
+      &__background--brand {
+        margin-top: -2.5vw;
+        .image__container {
+          @include mq(desktop) {
           }
         }
       }
@@ -416,7 +443,7 @@
 
     &--vertical {
       @include mq(desktop) {
-        margin-top: -4vh;
+        margin-top: -4.5vw;
         .svg__hand--desktop {
           animation: mickey-extra-touch-nudge-y 3.8s ease-in-out infinite;
         }

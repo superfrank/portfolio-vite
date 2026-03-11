@@ -16,7 +16,6 @@ import CaptionHand from "../components/CaptionHand";
 import Data from "../components/Data";
 
 // Assets
-import internetIndiaImageTwo from "../../../assets/articles/internet/article/image-2.png";
 import noMowDandelionVideoMp4 from "../../../assets/articles/nomow/article/no-mow-article-video-1-720-25.mp4";
 import noMowDandelionPoster from "../../../assets/articles/nomow/article/no-mow-article-video-1-poster.jpg";
 import noMowSketchesVideoMp4 from "../../../assets/articles/nomow/article/no-mow-sketches.mp4";
@@ -27,6 +26,11 @@ import noMowDandelionBlender from "../../../assets/articles/nomow/article/no-mow
 import noMowMobileStepOne from "../../../assets/articles/nomow/article/no-mow-mobile-step-1.jpg";
 import noMowMobileStepTwo from "../../../assets/articles/nomow/article/no-mow-mobile-step-2.jpg";
 import noMowMobileStepThree from "../../../assets/articles/nomow/article/no-mow-mobile-step-3.jpg";
+import noMowButterflyVideoMp4 from "../../../assets/articles/nomow/article/no-mow-butterfly-28-1080.mp4";
+import noMowButterflyPoster from "../../../assets/articles/nomow/article/no-mow-butterfly-poster.jpg";
+import noMowFlowersMp4 from "../../../assets/articles/nomow/article/no-mow-flowers-25-1080.mp4";
+import noMowFlowersPoster from "../../../assets/articles/nomow/article/no-mow-flowers-poster.jpg";
+import noMowBlueJayBlender from "../../../assets/articles/nomow/article/no-mow-blue-jay-blender.jpg";
 
 const NoMowArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -201,23 +205,39 @@ const NoMowArticle = ({ article }) => {
           title="Extra touch"
           body="I used instanced meshes to reuse a single petal model, allowing all 132 petals to share the same geometry and making the scene much more efficient to render."
         />
-
-        <CaptionHand
-          imageSrc={internetIndiaImageTwo}
-          imageAlt="An illustration of WhatsApp chat bubbles"
-          title="Extra touch"
-          body="The flowers are randomly placed, making each experience unique, just like a real lawn"
-        />
         <Text
           paragraphs={[
             "I created a model of a butterfly, sweat bee, earthworm and a blue jay to bring the grass patch to life. I animated the insects' wings in slow motion, accurately matching their natural speeds — like a butterfly’s gentle 10 flaps per second and a sweat bee’s rapid 250.",
           ]}
         />
 
-        <Text
-          paragraphs={[
-            "I built a scrolly header where the grass grows as you scroll, pulling readers into the story and hinting at the lawn's upcoming transformation.",
-          ]}
+        <VideoLarge
+          mp4={noMowButterflyVideoMp4}
+          poster={noMowButterflyPoster}
+          background="brand"
+          mask="brand"
+        />
+        <div className="grid grid--split-media--full item">
+          <ImageMedium
+            side="left"
+            src={noMowBlueJayBlender}
+            alt="A 3D illustration of a blue jay bird"
+            mask="none"
+            background="none"
+          />
+          <VideoMedium
+            side="right"
+            mp4={noMowFlowersMp4}
+            poster={noMowFlowersPoster}
+            mask="phone"
+            background="brand"
+          />
+        </div>
+        <CaptionHand
+          captionGridClass="grid__3-4"
+          handMotion="vertical"
+          title="Extra touch"
+          body="The flowers are randomly placed, making each experience unique, just like a real lawn"
         />
       </section>
     </Template>
