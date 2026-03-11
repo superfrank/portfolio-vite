@@ -409,6 +409,21 @@
     }
   }
 
+  .data {
+    &__number {
+      color: $black;
+      display: block;
+      margin-bottom: 0px;
+      font-size: $font-size-ten;
+      margin-top: 0px;
+      @include mq(desktop) {
+        font-size: $font-size-six;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+  }
+
   .svg__hand__container--mobile {
     width: 3.5vw;
     display: inline-block;

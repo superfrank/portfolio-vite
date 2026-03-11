@@ -31,6 +31,7 @@ import noMowButterflyPoster from "../../../assets/articles/nomow/article/no-mow-
 import noMowFlowersMp4 from "../../../assets/articles/nomow/article/no-mow-flowers-25-1080.mp4";
 import noMowFlowersPoster from "../../../assets/articles/nomow/article/no-mow-flowers-poster.jpg";
 import noMowBlueJayBlender from "../../../assets/articles/nomow/article/no-mow-blue-jay-blender.jpg";
+import noMowDataPageViews from "../../../assets/articles/nomow/article/no-mow-data-page-views.png";
 
 const NoMowArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -238,6 +239,34 @@ const NoMowArticle = ({ article }) => {
           handMotion="vertical"
           title="Extra touch"
           body="The flowers are randomly placed, making each experience unique, just like a real lawn"
+        />
+        <TextWithHeader
+          heading="Outcome"
+          paragraphs={[
+            <>
+              The project went on to win a{" "}
+              <a href="https://snd.org/best-of-design-competitions/results/">
+                Bronze SND for Page Design
+              </a>
+              , and was one of five projects that made up my Digital Portfolio,
+              which won Silver.
+            </>,
+            "",
+          ]}
+        />
+        <Data
+          metrics={[
+            {
+              label: "Page views over 3 days",
+              src: noMowDataPageViews,
+              alt: "Page views data graphic",
+            },
+            {
+              label: "Scroll tracking",
+              number: "48%",
+              copy: "of readers who started the experience scrolled through to the end",
+            },
+          ]}
         />
       </section>
     </Template>

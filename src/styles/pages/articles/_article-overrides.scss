@@ -29,6 +29,11 @@
       color: color.adjust($blue, $lightness: -10%);
     }
   }
+  .data {
+    &__number {
+      color: color.adjust($blue, $lightness: -10%);
+    }
+  }
 }
 
 .article--gold {
@@ -62,6 +67,11 @@
   }
   .caption {
     &__header {
+      color: color.adjust($gold, $lightness: -10%);
+    }
+  }
+  .data {
+    &__number {
       color: color.adjust($gold, $lightness: -10%);
     }
   }
@@ -147,6 +157,11 @@
   }
   .caption {
     &__header {
+      color: color.adjust($green, $lightness: -10%);
+    }
+  }
+  .data {
+    &__number {
       color: color.adjust($green, $lightness: -10%);
     }
   }
