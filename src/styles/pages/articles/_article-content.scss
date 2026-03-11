@@ -20,7 +20,7 @@
   .image {
     margin-bottom: 2rem;
     @include mq(desktop) {
-      margin-bottom: 5vh;
+      margin-bottom: 5vw;
     }
     img {
       max-width: 100%;
@@ -41,7 +41,7 @@
       background-color: $brand-1;
       margin-left: -10px;
       margin-right: -10px;
-      margin-bottom: 5vh;
+      margin-bottom: 5vw;
 
       @include mq(desktop) {
         margin-left: 0px;
@@ -69,10 +69,10 @@
         margin-top: -4rem;
         margin-bottom: 0;
         @include mq(desktop) {
-          padding-top: 0vh;
-          padding-bottom: 0vh;
-          margin-top: -5vh;
-          margin-bottom: 5vh;
+          padding-top: 0vw;
+          padding-bottom: 0vw;
+          margin-top: 0vw;
+          margin-bottom: 0vw;
         }
       }
     }
@@ -166,7 +166,7 @@
       }
     }
     @include mq(desktop) {
-      grid-column-gap: 5vh;
+      grid-column-gap: 2.5vw;
     }
     .image__background--none .image__container,
     .image__background--none .image__container {
@@ -178,11 +178,12 @@
       &__background--none {
         overflow: visible;
         .image__container {
-          padding-bottom: 0vh;
+          padding-bottom: 0vw;
           margin-bottom: 0;
           padding-top: 1rem;
           @include mq(desktop) {
-            padding-top: 5vh;
+            padding-top: 5vw;
+            margin-top: -7.5vw;
           }
         }
       }
