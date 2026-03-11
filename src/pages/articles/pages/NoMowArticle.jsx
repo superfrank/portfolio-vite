@@ -14,6 +14,7 @@ import VideoSmall from "../components/VideoSmall";
 import VideoMedium from "../components/VideoMedium";
 import CaptionHand from "../components/CaptionHand";
 import Data from "../components/Data";
+import Quote from "../components/Quote";
 
 // Assets
 import noMowDandelionVideoMp4 from "../../../assets/articles/nomow/article/no-mow-article-video-1-720-25.mp4";
@@ -251,20 +252,24 @@ const NoMowArticle = ({ article }) => {
               , and was one of five projects that made up my Digital Portfolio,
               which won Silver.
             </>,
-            "",
           ]}
+        />
+        <Quote
+          body="It’s art meets journalism and in a super accessible and practical way."
+          attribution="Zachary Goldfarb"
+          role="Futures Editor, The Washington Post"
         />
         <Data
           metrics={[
             {
-              label: "Page views over 3 days",
-              src: noMowDataPageViews,
-              alt: "Page views data graphic",
-            },
-            {
               label: "Scroll tracking",
               number: "48%",
               copy: "of readers who started the experience scrolled through to the end",
+            },
+            {
+              label: "Page views over 3 days",
+              src: noMowDataPageViews,
+              alt: "Page views data graphic",
             },
           ]}
         />

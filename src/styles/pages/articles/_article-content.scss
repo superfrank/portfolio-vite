@@ -64,9 +64,9 @@
     &__background--none {
       overflow: visible;
       .image__container {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        margin-top: -4rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        margin-top: 0rem;
         margin-bottom: 0;
         @include mq(desktop) {
           padding-top: 0vw;
@@ -160,7 +160,7 @@
   }
   .grid--split-media--full {
     .grid__1-2 {
-      padding-bottom: 2rem;
+      padding-bottom: 0rem;
       @include mq(desktop) {
         padding-bottom: 0;
         margin-bottom: 0;
@@ -200,7 +200,7 @@
         .image__container {
           padding-bottom: 0vw;
           margin-bottom: 0;
-          padding-top: 1rem;
+          padding-top: 0;
           @include mq(desktop) {
             padding-top: 5vw;
             margin-top: -7.5vw;
@@ -416,10 +416,11 @@
       margin-bottom: 0px;
       font-size: $font-size-ten;
       margin-top: 0px;
+      line-height: 1;
+      font-weight: bold;
+      margin-top: -1vw;
       @include mq(desktop) {
         font-size: $font-size-six;
-        font-weight: bold;
-        line-height: 1;
       }
     }
   }
@@ -462,6 +463,98 @@
         .svg__hand--desktop {
           animation: mickey-extra-touch-nudge-y 3.8s ease-in-out infinite;
         }
+      }
+    }
+  }
+  .quote {
+    margin: 0 0 5.6rem;
+    margin-top: -2.8rem;
+
+    @include mq(desktop) {
+      margin-top: -2.5vw;
+      margin-bottom: 3.5vw;
+    }
+
+    .grid__2-3 {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: -10px;
+        background-color: $grey;
+        width: calc(100% + 20px);
+        height: 2px;
+
+        @include mq(desktop) {
+          width: calc(100%);
+          left: 0px;
+        }
+      }
+      &::before {
+        top: -2vw;
+        @include mq(desktop) {
+          top: -1vw;
+        }
+      }
+      &::after {
+        bottom: -2vw;
+        @include mq(desktop) {
+          bottom: -1vw;
+        }
+      }
+    }
+
+    &__body {
+      position: relative;
+      margin: 0;
+      text-indent: 9vw;
+      color: $black;
+      font-size: $font-size-eight;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+
+      @include mq(desktop) {
+        text-indent: 3vw;
+        font-size: 2vw;
+      }
+
+      &::before {
+        content: "“";
+        position: absolute;
+        left: -9vw;
+        top: 0.5vw;
+        color: $green;
+        font-family: $sans-serif;
+        font-size: 18vw;
+        line-height: 1;
+        @include mq(desktop) {
+          font-size: $font-size-six;
+          top: -0.45vw;
+          left: -3vw;
+        }
+      }
+    }
+
+    &__attribution {
+      margin: 0.4rem 0 0;
+      color: $black;
+      font-size: $font-size-five;
+      line-height: 1.1;
+
+      @include mq(desktop) {
+        font-size: 2vw;
+      }
+    }
+
+    &__role {
+      margin: 0.1rem 0 0;
+      color: $mid-grey;
+      font-size: $font-size-five;
+      line-height: 1.1;
+
+      @include mq(desktop) {
+        font-size: 2vw;
       }
     }
   }
