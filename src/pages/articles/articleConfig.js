@@ -73,7 +73,7 @@ export const articleConfig = {
       ],
       standfirst: [
         "My parents are keen gardeners, who like everything neatly pruned. So when my dad suddenly stopped mowing the lawn and let it grow wild, I was more than a little surprised.",
-        "Over a cup of tea (and possibly a cheese sandwich) we chatted it through, and I discovered the “No Mow Movement”. This became the starting point for my pitch to the climate team.",
+        "Over a cup of tea (and possibly a cheese sandwich) we talked it through, and I discovered the “No Mow Movement”. This became the starting point for my pitch to the climate team.",
       ],
     },
   },

@@ -1,6 +1,16 @@
 @use "../../sass-mq/mq" as *;
 @use "../../modules/typography" as *;
 
+p {
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  @include mq(mobileLandscape) {
+    font-size: 3.5vw;
+  }
+  @include mq(desktop) {
+    font-size: 1.5vw;
+  }
+}
 .text__body {
   margin-top: 0;
   margin-bottom: 2vw;
