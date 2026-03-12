@@ -176,7 +176,17 @@ const NoMowArticle = ({ article }) => {
         <Text
           paragraphs={[
             "Along with graphics reporter Simon Ducroquet, we started building out the 3D graphics. While Simon created the soil and grass, I jumped into Blender and began on the flowers. Starting off with the simpler models of a dandelion and white clover and moving onto the more complex (but beautifully named!) bee balm.",
-            "Once I was happy with the models, I built them into the article using React Three Fiber.",
+            <>
+              Once I was happy with the models, I built them into the article
+              using{" "}
+              <a
+                href="https://r3f.docs.pmnd.rs/getting-started/introduction"
+                target="_blank"
+              >
+                React Three Fiber
+              </a>
+              .
+            </>,
           ]}
         />
         <VideoLarge
@@ -205,7 +215,20 @@ const NoMowArticle = ({ article }) => {
           captionGridClass="grid__1-2"
           handMotion="vertical"
           title="Extra touch"
-          body="I used instanced meshes to reuse a single petal model, allowing all 132 petals to share the same geometry and making the scene much more efficient to render."
+          body={[
+            <>
+              I used{" "}
+              <a
+                href={"https://drei.docs.pmnd.rs/performances/instances"}
+                target="_blank"
+              >
+                instanced meshes
+              </a>{" "}
+              to reuse a single petal model, allowing all 132 petals to share
+              the same geometry and making the scene much more efficient to
+              render.
+            </>,
+          ]}
         />
         <Text
           paragraphs={[
@@ -246,7 +269,10 @@ const NoMowArticle = ({ article }) => {
           paragraphs={[
             <>
               The project went on to win a{" "}
-              <a href="https://snd.org/best-of-design-competitions/results/">
+              <a
+                href="https://snd.org/best-of-design-competitions/results/"
+                target="_blank"
+              >
                 Bronze SND for Page Design
               </a>
               , and was one of five projects that made up my Digital Portfolio,
