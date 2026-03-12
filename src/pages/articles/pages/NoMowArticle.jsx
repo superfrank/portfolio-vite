@@ -182,12 +182,17 @@ const NoMowArticle = ({ article }) => {
               <a
                 href="https://r3f.docs.pmnd.rs/getting-started/introduction"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 React Three Fiber
               </a>
               . I animated the models and the camera using a combination of
               Blender and{" "}
-              <a href="https://www.theatrejs.com/" target="_blank">
+              <a
+                href="https://www.theatrejs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Theatre.js
               </a>
               .
@@ -226,6 +231,7 @@ const NoMowArticle = ({ article }) => {
               <a
                 href={"https://drei.docs.pmnd.rs/performances/instances"}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 instanced meshes
               </a>{" "}
@@ -277,6 +283,7 @@ const NoMowArticle = ({ article }) => {
               <a
                 href="https://snd.org/best-of-design-competitions/results/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Bronze SND for Page Design
               </a>

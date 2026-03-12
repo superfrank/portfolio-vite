@@ -5,8 +5,8 @@ import ProjectHoverReveal from "./ProjectHoverReveal";
 
 // Images
 import anthropoceneImg from "../../../assets/home/hover/anthropocene.jpg";
-import architectureImg from "../../../assets/home/hover/architecture.jpg";
 import cairoImg from "../../../assets/home/hover/cairo.jpg";
+import kitchenImg from "../../../assets/home/hover/kitchen.jpg";
 import internetImg from "../../../assets/home/hover/internet.jpg";
 import soundscapeImg from "../../../assets/home/hover/soundscape.jpg";
 import texasImg from "../../../assets/home/hover/texas.jpg";
@@ -87,30 +87,30 @@ const ProjectsList = () => {
   const projects = [
     {
       id: 1,
-      title: "Anthropocene",
-      hoverImg: anthropoceneImg,
-      href: "https://wapo.st/4tq6HgL",
-      external: true,
-    },
-    {
-      id: 2,
       title: "1920s shootout",
       hoverImg: texasImg,
       href: "https://wapo.st/3ZZNmp2",
       external: true,
     },
     {
-      id: 3,
+      id: 2,
       title: "Cairo sounds",
       hoverImg: cairoImg,
-      href: "https://wapo.st/46BXMPm",
+      href: "https://wapo.st/46YFUyB",
+      external: true,
+    },
+    {
+      id: 3,
+      title: "3D kitchen",
+      hoverImg: kitchenImg,
+      href: "https://wapo.st/46O0sd1",
       external: true,
     },
     {
       id: 4,
-      title: "3D architecture",
-      hoverImg: architectureImg,
-      href: "https://wapo.st/3ZkpFYt",
+      title: "Anthropocene",
+      hoverImg: anthropoceneImg,
+      href: "https://wapo.st/4s0OLrM",
       external: true,
     },
     {
