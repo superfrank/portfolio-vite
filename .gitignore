@@ -28,6 +28,7 @@ dist-ssr
 plan.md
 *.psd
 reference/no-mow
+reference/portfolio-webpack
 public/no-mow
 public/_next
 public/models
