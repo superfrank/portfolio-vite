@@ -133,7 +133,7 @@ const NoMowArticle = ({ article }) => {
       <section className="content wrapper">
         <Text
           paragraphs={[
-            "I wanted to focus on how it could have an impact on even a tiny square of grass. I looked at dioramas, illustrative 3D models and minecraft as visual references and started sketching out rough ideas.",
+            "I wanted to focus on how changing your mowing habits could have an impact on even a tiny square of grass. I looked at dioramas, illustrative 3D models and minecraft as visual references and started sketching out rough ideas.",
           ]}
         />
         <VideoLarge
@@ -184,6 +184,11 @@ const NoMowArticle = ({ article }) => {
                 target="_blank"
               >
                 React Three Fiber
+              </a>
+              . I animated the models and the camera using a combination of
+              Blender and{" "}
+              <a href="https://www.theatrejs.com/" target="_blank">
+                Theatre.js
               </a>
               .
             </>,
