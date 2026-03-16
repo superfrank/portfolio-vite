@@ -1,5 +1,6 @@
 import InternetArticle from "./pages/InternetArticle";
 import NoMowArticle from "./pages/NoMowArticle";
+import TexasArticle from "./pages/TexasArticle";
 import internetHeaderImageMobile from "../../assets/articles/internet/header-image-background__mobile.png";
 import internetHeaderImageDesktop from "../../assets/articles/internet/article/header-image-background__desktop.png";
 import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
@@ -11,6 +12,8 @@ const internetLiveLink =
 const noMowLiveLink = import.meta.env.DEV
   ? "/no-mow/index.html"
   : "https://www.washingtonpost.com/climate-solutions/interactive/2024/no-mow-lawn-care-tips/";
+
+const texasLiveLink = "https://wapo.st/3ZZNmp2";
 
 export const articleConfig = {
   internet: {
@@ -70,10 +73,47 @@ export const articleConfig = {
           label: "Role",
           value: "Pitched idea, Built models, Design, Development",
         },
+        {
+          key: "award",
+          label: "Award",
+          value: "SND Bronze",
+        },
       ],
       standfirst: [
         "My parents are keen gardeners, who like everything neatly pruned. So when my dad suddenly stopped mowing the lawn and let it grow wild, I was taken aback.",
         "Over a cup of tea (and possibly a cheese & tomato sandwich) we talked it through, and I discovered the “No Mow Movement”. This became the starting point for my pitch to the climate team.",
+      ],
+    },
+  },
+  texas: {
+    slug: "texas",
+    title: "Why you should let your grass grow",
+    theme: "blue",
+    component: TexasArticle,
+    topper: {
+      alt: "Texas article topper",
+    },
+    intro: {
+      headline: "A 100-year-old battle for the truth",
+      liveLink: texasLiveLink,
+      metaMarqueeRow: [
+        { key: "type", label: "Type", value: "Interactive" },
+        { key: "client", label: "Client", value: "The Washington Post" },
+        { key: "year", label: "Year", value: "2024" },
+        {
+          key: "role",
+          label: "Role",
+          value: "Art direction, Animation, Design, Development, Editing",
+        },
+        {
+          key: "award",
+          label: "Awards",
+          value: "SND Silver, SND Bronze",
+        },
+      ],
+      standfirst: [
+        "Texas based reporter, Arelis Hernández brought the design team the story of a 1920's shootout on the Mexico-U.S. border and asked for help with how to tell it in the right way.",
+        "We decided to make it an illustrated and animated feature contrasting the official record with the oral histories of the descendants who lived it.",
       ],
     },
   },

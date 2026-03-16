@@ -89,8 +89,9 @@ const ProjectsList = () => {
       id: 1,
       title: "1920s shootout",
       hoverImg: texasImg,
-      href: "https://wapo.st/3ZZNmp2",
-      external: true,
+      // href: "https://wapo.st/3ZZNmp2",
+      href: "/texas",
+      external: false,
     },
     {
       id: 2,

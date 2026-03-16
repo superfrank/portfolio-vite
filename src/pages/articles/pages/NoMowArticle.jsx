@@ -40,7 +40,7 @@ const NoMowArticle = ({ article }) => {
   const isMobile = useIsMobile();
 
   return (
-    <Template className="article--nomow">
+    <Template className={`article--${article.theme}`}>
       <Logo href="/" context="article" theme={article.theme} />
 
       <div className="topper">

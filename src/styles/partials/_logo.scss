@@ -70,6 +70,12 @@
   }
 }
 
+.logo--theme-blue {
+  .logo__link:hover #frames {
+    fill: colors.$blue;
+  }
+}
+
 // .logo--theme-election {
 //   .logo__link:hover #frames {
 //     fill: #00b2ff;

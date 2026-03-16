@@ -3,13 +3,26 @@
 @use "sass:color";
 
 .article {
-  --link-underline-color: #ff6c6a;
+  --link-underline-color: #{$brand-1};
   --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff6c6a' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
 
 .article--blue {
-  --link-underline-color: #00b2ff;
+  --link-underline-color: #{$blue};
   --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2300b2ff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+
+  .headline {
+    &__link {
+      &:hover {
+        color: color.adjust(
+          $blue,
+          $hue: 5deg,
+          $saturation: -5%,
+          $lightness: -30%
+        );
+      }
+    }
+  }
   .topper {
     background-color: $blue;
   }
@@ -29,6 +42,16 @@
   .caption {
     &__header {
       color: color.adjust($blue, $lightness: -10%);
+    }
+  }
+  .quote {
+    &__attribution {
+      color: color.adjust($blue, $lightness: -10%);
+    }
+    &__body {
+      &::before {
+        color: color.adjust($blue, $lightness: -10%);
+      }
     }
   }
 }
@@ -65,6 +88,16 @@
   .caption {
     &__header {
       color: color.adjust($gold, $lightness: -10%);
+    }
+  }
+  .quote {
+    &__attribution {
+      color: color.adjust($gold, $lightness: -10%);
+    }
+    &__body {
+      &::before {
+        color: color.adjust($gold, $lightness: -10%);
+      }
     }
   }
 }
@@ -104,7 +137,7 @@
 }
 
 .article--nomow {
-  --link-underline-color: #38cf5b;
+  --link-underline-color: #{$green};
   --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2338cf5b' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   .topper {
     background-color: $green;
@@ -152,6 +185,11 @@
   .quote {
     &__attribution {
       color: color.adjust($green, $lightness: -10%);
+    }
+    &__body {
+      &::before {
+        color: color.adjust($green, $lightness: -10%);
+      }
     }
   }
 }

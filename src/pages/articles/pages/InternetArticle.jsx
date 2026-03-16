@@ -48,7 +48,7 @@ const InternetArticle = ({ article }) => {
   const isMobile = useIsMobile();
 
   return (
-    <Template className="article--internet">
+    <Template className={`article--${article.theme}`}>
       <Logo href="/" context="article" theme={article.theme} />
 
       <CustomTopperInternet

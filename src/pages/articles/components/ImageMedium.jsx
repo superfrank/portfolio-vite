@@ -6,7 +6,12 @@ const ImageMedium = ({
   background = "brand",
 }) => {
   const isPhoneMask = mask === "phone";
-  const sideClassName = side === "right" ? "grid__3-4" : "grid__1-2";
+  const sideClassName =
+    side === "right"
+      ? "grid__3-4"
+      : side === "middle"
+        ? "grid__2-3"
+        : "grid__1-2";
   const backgroundClassName =
     background === "brand"
       ? "image__background--brand"
