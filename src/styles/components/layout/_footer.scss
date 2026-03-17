@@ -1,8 +1,11 @@
 @use "../../sass-mq/mq";
 @use "../../modules/colors";
 @use "../../modules/typography";
+@use "sass:color";
 
 .footer {
+  --footer-hover-color: #{colors.$brand-1};
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -59,7 +62,7 @@
   }
 
   &__top:hover &__label {
-    color: colors.$brand-1;
+    color: var(--footer-hover-color);
     transition: color 0.6s ease;
   }
 
@@ -67,6 +70,33 @@
     transform-origin: center center;
     animation: footer-wiggle 1000ms ease-in-out;
   }
+}
+
+.footer--theme-nomow {
+  --footer-hover-color: #{color.adjust(
+      colors.$green,
+      $hue: 5deg,
+      $saturation: -5%,
+      $lightness: -12.5%
+    )};
+}
+
+.footer--theme-blue {
+  --footer-hover-color: #{color.adjust(
+      colors.$blue,
+      $hue: 5deg,
+      $saturation: -5%,
+      $lightness: -12.5%
+    )};
+}
+
+.footer--theme-internet {
+  --footer-hover-color: #{color.adjust(
+      colors.$brand-1,
+      $hue: 5deg,
+      $saturation: -5%,
+      $lightness: -12.5%
+    )};
 }
 
 @keyframes footer-wiggle {

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { getArticleConfig } from "./articleConfig";
+import Footer from "../../components/layout/Footer";
 
 const ArticlePage = () => {
   const { articleSlug } = useParams();
@@ -18,7 +19,12 @@ const ArticlePage = () => {
 
   const ArticleComponent = article.component;
 
-  return <ArticleComponent article={article} />;
+  return (
+    <>
+      <ArticleComponent article={article} />
+      <Footer theme={article.theme} />
+    </>
+  );
 };
 
 export default ArticlePage;
