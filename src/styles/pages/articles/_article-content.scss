@@ -351,7 +351,7 @@
     }
   }
   .caption {
-    margin-bottom: 2.8rem;
+    margin-bottom: 1.4rem;
     .svg__hand--mobile {
       margin-top: 1vw;
     }
@@ -360,7 +360,7 @@
     }
 
     @include mq(desktop) {
-      margin-bottom: 5vw;
+      margin-bottom: 2.5vw;
       align-self: flex-start;
       padding-top: 1vw;
       display: flex;

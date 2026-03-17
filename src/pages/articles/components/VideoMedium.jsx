@@ -12,7 +12,12 @@ const VideoMedium = ({
   playsInline = true,
 }) => {
   const isPhoneMask = mask === "phone";
-  const sideClassName = side === "right" ? "grid__3-4" : "grid__1-2";
+  const sideClassName =
+    side === "right"
+      ? "grid__3-4"
+      : side === "middle"
+        ? "grid__2-3"
+        : "grid__1-2";
   const backgroundClassName =
     background === "brand"
       ? "image__background--brand"
@@ -29,7 +34,9 @@ const VideoMedium = ({
   const videoClassName = isPhoneMask ? "image__floating--phone" : "";
 
   return (
-    <div className={`image ${sideClassName} image__background ${backgroundClassName}`}>
+    <div
+      className={`image ${sideClassName} image__background ${backgroundClassName}`}
+    >
       <div className={`image__container ${containerClassName}`}>
         <div className={`image__mask ${maskClassName}`}>
           <video

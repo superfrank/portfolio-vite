@@ -32,6 +32,8 @@ import texasMovieTrailerVideoMp4 from "../../../assets/articles/texas/article/mo
 import texasMovieTrailerPoster from "../../../assets/articles/texas/article/movie-trailer-poster.jpg";
 import texasGraveVideoMp4 from "../../../assets/articles/texas/article/gravestone-28-1080.mp4";
 import texasGravePoster from "../../../assets/articles/texas/article/gravestone-poster.jpg";
+import texasPageViews from "../../../assets/articles/texas/article/texas-data.png";
+import texasTranslationMp4 from "../../../assets/articles/texas/article/spanish-translation-28.mp4";
 
 const TexasArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -187,7 +189,21 @@ const TexasArticle = ({ article }) => {
         />
         <Text
           paragraphs={[
-            "I collaborated closely with the photo editor, Natalia Jiménez-Stuard, to select and place the photos throughout the piece. Instead of cropping the medium-format film scans, I used the raw images with their bleeding edges intact, helping them feel more embedded and organic within the page.",
+            <>
+              The striking photography is by{" "}
+              <a
+                href="https://desireerios.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Desiree Rios
+              </a>
+              . I collaborated closely with the photo editor, Natalia
+              Jiménez-Stuard, to select and place the photos throughout the
+              piece. Instead of cropping the medium-format film scans, I used
+              the raw images with their bleeding edges intact, helping them feel
+              more embedded and organic within the page.
+            </>,
           ]}
         />
         <div className="grid grid--split-media item">
@@ -212,9 +228,28 @@ const TexasArticle = ({ article }) => {
           mask="brand"
           background="brand"
         />
-        <Text
+        {/* <Text
           paragraphs={[
             "We translated the piece into Spanish to reach new audiences and because the story held such a personal significance for the descendants.",
+          ]}
+        /> */}
+        <div className="grid grid--split-media--full item">
+          <VideoMedium
+            side="middle"
+            mp4={texasTranslationMp4}
+            mask="phone"
+            background="brand"
+          />
+        </div>
+        <CaptionHand
+          captionGridClass="grid__2-3"
+          handMotion="vertical"
+          title="Extra touch"
+          body="We translated the piece into Spanish to reach new audiences and because the story held such a personal significance for the descendants."
+        />
+
+        <Text
+          paragraphs={[
             "I set up a custom Photo-flow component that gently faded from portraits of each descendant to photos of their relative’s grave",
           ]}
         />
@@ -224,6 +259,7 @@ const TexasArticle = ({ article }) => {
           mask="brand"
           background="brand"
         />
+
         <TextWithHeader
           heading="Outcome"
           paragraphs={[
@@ -249,9 +285,19 @@ const TexasArticle = ({ article }) => {
         <Data
           metrics={[
             {
-              label: "Scroll tracking",
-              number: "48%",
-              copy: "of readers who started the experience scrolled through to the end",
+              label: "Average engaged time",
+              number: "2m 10s",
+              copy: (
+                <>
+                  Stories of this length typically have an average engaged time
+                  of <strong>1m 43s</strong>
+                </>
+              ),
+            },
+            {
+              label: "Page views over 3 days",
+              src: texasPageViews,
+              alt: "Page views data graphic",
             },
           ]}
         />
