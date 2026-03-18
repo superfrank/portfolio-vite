@@ -5,6 +5,7 @@ import CustomTopperTexas from "../components/texas/CustomTopperTexas";
 import MickeyHand from "../../../components/MickeyHand";
 import useIsMobile from "../../../hooks/useIsMobile";
 import Text from "../components/Text";
+import TextList from "../components/TextList";
 import TextWithHeader from "../components/TextWithHeader";
 import ImageLarge from "../components/ImageLarge";
 import VideoLarge from "../components/VideoLarge";
@@ -119,8 +120,59 @@ const CairoArticle = ({ article }) => {
         />
         <Text
           paragraphs={[
-            "To shape the story, I worked with editors to restructure the piece and pushed for the illustrations to be the introduction (almost like a movie trailer) to ground readers in the historical context. ",
-            "To help guide through conflicting accounts, I developed three visual treatments for the scrolly-telling component: neutral scenes (black, centered), the family’s account (orange, left-aligned), and the lawmen’s version (blue, right-aligned). This helped clearly distinguish where the stories aligned — and where they diverged.",
+            "I asked motion designer Sarah Hashemi to join the project. Having collaborated together before, I knew she could help bring the sounds to life. We brainstormed sketches before landing on colourful, subtle line work. The animations acted as a visual cue to show that sound was integral to the piece.",
+          ]}
+        />
+        <CaptionHand
+          captionGridClass="grid__2-3"
+          handMotion="vertical"
+          title="Extra touch"
+          body="The colour and shape were designed to reflect the character of each sound"
+        />
+
+        <TextWithHeader
+          heading="User testing"
+          paragraphs={[
+            "We already had most of the photos and were finalising the list of sounds. As we hadn’t built a piece like this before, we had time to get it right.",
+            "I created two prototypes and tested them with 20 readers, working closely with our product UX team who advised on structuring and running the sessions.",
+            "A: locked the screen in place until readers either enabled or disabled the sound.",
+            "B: let the readers scroll as normal.",
+          ]}
+        />
+        <TextList
+          intro="The team had three main questions:"
+          items={[
+            {
+              question:
+                "Should the screen be locked until readers either enabled or disabled sound?",
+              answer: "No, they wanted to scroll.",
+              quote: "\"I'd probably scroll, oh I can't\"",
+              attribution: "Caira",
+            },
+            {
+              question: "Will readers enable sound?",
+              answer: "Yes.",
+              quote:
+                '"The reason I visited the article would be to hear the city."',
+              attribution: "Sam",
+            },
+            {
+              question: "Do readers know the sound changes as you scroll?",
+              answer:
+                "No. Most would play and pause as they scrolled. We added language to help.",
+            },
+          ]}
+        />
+
+        <Text
+          paragraphs={[
+            "The final design used a six-column grid on mobile and a twelve-column grid on desktop. This gave the story a clear hierarchy while allowing the layout to feel asymmetrical and breathe.",
+            "Based on the UX testing, I built an audio UI that scrolled with the story so readers could control sound without losing their place. At larger breakpoints, I introduced volume controls after testing showed desktop users struggled to adjust audio levels.",
+          ]}
+        />
+        <Text
+          paragraphs={[
+            "I animated the topper so that the imagery faded in and out, mirroring the loss of the city’s sounds. I added a subtle pulsing wave animation on the buttons as a clear cue to enable the audio.",
           ]}
         />
 
@@ -128,23 +180,30 @@ const CairoArticle = ({ article }) => {
           heading="Outcome"
           paragraphs={[
             <>
-              The project went on to win a{" "}
+              The project went on to win an{" "}
               <a
-                href="https://snd.org/best-of-design-competitions/results/"
+                href="https://www.washingtonpost.com/pr/2023/08/16/post-wins-two-edward-r-murrow-awards/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bronze SND for Illustration + Use of multimedia
+                Edward R. Murrow Award for Excellence in Sound
+              </a>{" "}
+              and a{" "}
+              <a
+                href="https://snd.org/snd44-results/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Silver SND for Audio Design
               </a>
-              , and was one of five projects that made up my Digital Portfolio,
-              which won Silver.
+              .
             </>,
           ]}
         />
         <Quote
           body="It's a beautiful and ambitious project that seamlessly marries visuals and audio."
           attribution="Judges comments"
-          role="Society of News Design 43"
+          role="Society of News Design, 43"
         />
         <Data
           metrics={[

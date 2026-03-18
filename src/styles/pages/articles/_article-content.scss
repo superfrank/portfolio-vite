@@ -337,6 +337,34 @@
     }
   }
 
+  .text--list {
+    .text-list {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 1.5em;
+    }
+
+    .text-list {
+      &__answer,
+      &__quote,
+      &__attribution {
+        color: $brand-1;
+      }
+    }
+
+    .text-list__item {
+      margin-bottom: 1.6rem;
+
+      @include mq(desktop) {
+        margin-bottom: 1.25vw;
+      }
+    }
+
+    .text-list__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .grid:first-of-type {
     .text {
       margin-top: 0;

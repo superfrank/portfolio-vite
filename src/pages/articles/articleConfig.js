@@ -143,7 +143,7 @@ export const articleConfig = {
         {
           key: "award",
           label: "Awards",
-          value: "SND Silver, SND Bronze",
+          value: "Edward R. Murrow, SND Silver",
         },
       ],
       standfirst: [

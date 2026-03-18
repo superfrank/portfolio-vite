@@ -141,12 +141,20 @@
     background-color: $black;
     p {
       color: $white-text;
+      span {
+        color: color.adjust($yellow, $lightness: -10%);
+      }
     }
     a {
       color: $white-text;
     }
     h2 {
       color: $white-text;
+    }
+    .caption {
+      &__header {
+        color: color.adjust($yellow, $lightness: -10%);
+      }
     }
     .data {
       &__number {
@@ -166,15 +174,20 @@
         color: $mid-grey;
       }
     }
+    .text-list {
+      &__item {
+        color: $white-text;
+      }
+      &__answer,
+      &__quote,
+      &__attribution {
+        color: $yellow;
+      }
+    }
   }
   .image {
     &__background--brand {
       background-color: $yellow;
-    }
-  }
-  .caption {
-    &__header {
-      color: color.adjust($yellow, $lightness: -10%);
     }
   }
 }
