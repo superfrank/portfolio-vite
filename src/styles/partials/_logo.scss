@@ -76,6 +76,12 @@
   }
 }
 
+.logo--theme-yellow {
+  .logo__link:hover #frames {
+    fill: colors.$yellow;
+  }
+}
+
 // .logo--theme-election {
 //   .logo__link:hover #frames {
 //     fill: #00b2ff;

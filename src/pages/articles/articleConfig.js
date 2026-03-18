@@ -147,7 +147,8 @@ export const articleConfig = {
         },
       ],
       standfirst: [
-        "An audio-visual tour of the streets of Cairo. Looking at and listening to the sounds that are fading away",
+        "Cairo Bureau Chief, Siobhán O’Grady came to us with the idea of telling a story through the city's sounds. We wanted to show how as it grows, the sounds that define it change.",
+        "My challenge was how to visualise that in a way that encouraged readers to press play.",
       ],
     },
   },

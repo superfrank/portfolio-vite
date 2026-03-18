@@ -89,6 +89,14 @@
       $lightness: -12.5%
     )};
 }
+.footer--theme-yellow {
+  --footer-hover-color: #{color.adjust(
+      colors.$yellow,
+      $hue: 5deg,
+      $saturation: -5%,
+      $lightness: -12.5%
+    )};
+}
 
 .footer--theme-internet {
   --footer-hover-color: #{color.adjust(

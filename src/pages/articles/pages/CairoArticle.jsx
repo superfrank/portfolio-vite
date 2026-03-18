@@ -19,8 +19,7 @@ import Data from "../components/Data";
 import Quote from "../components/Quote";
 
 // Assets
-import texasSketchesVideoMp4 from "../../../assets/articles/texas/article/texas-moodboard-28-1080.mp4";
-import texasSketchesPoster from "../../../assets/articles/texas/article/texas-moodboard-poster.jpg";
+import cairoMoodboard from "../../../assets/articles/cairo/article/cairo-moodboard.jpg";
 import cairoPageViews from "../../../assets/articles/cairo/article/cairo-page-views.png";
 
 const CairoArticle = ({ article }) => {
@@ -97,11 +96,10 @@ const CairoArticle = ({ article }) => {
       <section className="content wrapper">
         <Text
           paragraphs={[
-            "I wanted the visuals to feel embedded in the story, setting the scene rather than decorating it.",
+            "I wanted the piece to feel dreamlike, as if readers were travelling through the streets from memory.",
             <>
-              I wanted the piece to feel dreamlike, as if readers were
-              travelling through the streets from memory. I drew inspiration
-              from a WW2 memorial and fashion photography. The music producer{" "}
+              I drew inspiration from a WW2 memorial and fashion photography.
+              The music producer{" "}
               <a
                 href="https://www.mergrim.net/en/"
                 target="_blank"
@@ -114,9 +112,9 @@ const CairoArticle = ({ article }) => {
             </>,
           ]}
         />
-        <VideoLarge
-          mp4={texasSketchesVideoMp4}
-          poster={texasSketchesPoster}
+        <ImageLarge
+          src={cairoMoodboard}
+          alt="Early sketches and visual references used during concept development"
           background="none"
         />
         <Text

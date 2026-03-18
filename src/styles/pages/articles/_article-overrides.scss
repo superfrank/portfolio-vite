@@ -1,15 +1,16 @@
 @use "../../sass-mq/mq" as *;
 @use "../../modules/colors" as *;
 @use "sass:color";
+@use "sass:string";
 
 .article {
   --link-underline-color: #{$brand-1};
-  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff6c6a' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23#{string.slice(#{$brand-1}, 2)}' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
 
 .article--blue {
   --link-underline-color: #{$blue};
-  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2300b2ff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23#{string.slice(#{$blue}, 2)}' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 
   .headline {
     &__link {
@@ -101,6 +102,82 @@
     }
   }
 }
+.article--yellow {
+  --link-underline-color: #{$yellow};
+  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23#{string.slice(#{$yellow}, 2)}' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+
+  .headline {
+    &__link {
+      &:hover {
+        color: color.adjust(
+          $yellow,
+          $hue: 5deg,
+          $saturation: -5%,
+          $lightness: -30%
+        );
+      }
+    }
+  }
+  .topper {
+    background-color: $yellow;
+  }
+  .headline,
+  .standfirst,
+  a {
+    color: $dark-black;
+  }
+  .introduction {
+    background-color: color.adjust($yellow, $lightness: -10%);
+  }
+  .information {
+    &__data {
+      color: $dark-black;
+    }
+    &__meta {
+      color: color.adjust($yellow, $lightness: -30%);
+    }
+  }
+  .content {
+    background-color: $black;
+    p {
+      color: $white-text;
+    }
+    a {
+      color: $white-text;
+    }
+    h2 {
+      color: $white-text;
+    }
+    .data {
+      &__number {
+        color: $white-text;
+      }
+    }
+    .quote {
+      &__attribution {
+        color: color.adjust($yellow, $lightness: -10%);
+      }
+      &__body {
+        &::before {
+          color: color.adjust($yellow, $lightness: -10%);
+        }
+      }
+      &__role {
+        color: $mid-grey;
+      }
+    }
+  }
+  .image {
+    &__background--brand {
+      background-color: $yellow;
+    }
+  }
+  .caption {
+    &__header {
+      color: color.adjust($yellow, $lightness: -10%);
+    }
+  }
+}
 
 .article--world-cup {
   .topper {
@@ -138,7 +215,7 @@
 
 .article--nomow {
   --link-underline-color: #{$green};
-  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2338cf5b' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  --link-squiggle-url: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift{from{transform:translateX(0);}to{transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23#{string.slice(#{$green}, 2)}' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   .topper {
     background-color: $green;
   }
