@@ -103,7 +103,7 @@ export const articleConfig = {
         {
           key: "role",
           label: "Role",
-          value: "Art direction, Animation, Design, Development, Editing",
+          value: "Animation, Art direction, Design, Development, Editing",
         },
         {
           key: "award",
