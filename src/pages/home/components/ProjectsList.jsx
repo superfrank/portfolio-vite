@@ -97,8 +97,9 @@ const ProjectsList = () => {
       id: 2,
       title: "Cairo sounds",
       hoverImg: cairoImg,
-      href: "https://wapo.st/46YFUyB",
-      external: true,
+      // href: "https://wapo.st/46YFUyB",
+      href: "/cairosounds",
+      external: false,
     },
     {
       id: 3,

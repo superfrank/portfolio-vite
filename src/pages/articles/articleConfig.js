@@ -1,6 +1,7 @@
 import InternetArticle from "./pages/InternetArticle";
 import NoMowArticle from "./pages/NoMowArticle";
 import TexasArticle from "./pages/TexasArticle";
+import CairoArticle from "./pages/CairoArticle";
 import internetHeaderImageMobile from "../../assets/articles/internet/header-image-background__mobile.png";
 import internetHeaderImageDesktop from "../../assets/articles/internet/article/header-image-background__desktop.png";
 import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
@@ -14,6 +15,8 @@ const noMowLiveLink = import.meta.env.DEV
   : "https://www.washingtonpost.com/climate-solutions/interactive/2024/no-mow-lawn-care-tips/";
 
 const texasLiveLink = "https://wapo.st/3ZZNmp2";
+
+const cairoLiveLink = "https://wapo.st/46YFUyB";
 
 export const articleConfig = {
   internet: {
@@ -87,7 +90,7 @@ export const articleConfig = {
   },
   texas: {
     slug: "texas",
-    title: "Why you should let your grass grow",
+    title: "A 100-year-old battle for the truth",
     theme: "blue",
     component: TexasArticle,
     topper: {
@@ -114,6 +117,37 @@ export const articleConfig = {
       standfirst: [
         "Texas based reporter, Arelis Hernández brought the design team the story of a 1920's shootout on the Mexico-U.S. border and asked for help with how to tell it in the right way.",
         "We decided to make it an illustrated and animated feature contrasting the official record with the oral histories of the descendants who lived it.",
+      ],
+    },
+  },
+  cairosounds: {
+    slug: "cairosounds",
+    title: "Saving the sounds of an ancient city",
+    theme: "yellow",
+    component: CairoArticle,
+    topper: {
+      alt: "Cairo article topper",
+    },
+    intro: {
+      headline: "Saving the sounds of an ancient city",
+      liveLink: cairoLiveLink,
+      metaMarqueeRow: [
+        { key: "type", label: "Type", value: "Interactive" },
+        { key: "client", label: "Client", value: "The Washington Post" },
+        { key: "year", label: "Year", value: "2024" },
+        {
+          key: "role",
+          label: "Role",
+          value: "Animation, Art direction, Design, Development, Editing",
+        },
+        {
+          key: "award",
+          label: "Awards",
+          value: "SND Silver, SND Bronze",
+        },
+      ],
+      standfirst: [
+        "An audio-visual tour of the streets of Cairo. Looking at and listening to the sounds that are fading away",
       ],
     },
   },
