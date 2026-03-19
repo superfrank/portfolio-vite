@@ -1,7 +1,8 @@
 @use "../../sass-mq/mq" as *;
 @use "../../modules/colors" as *;
 
-.article--nomow {
+.article--nomow,
+.article--yellow {
   .topper {
     position: relative;
     height: 50vh;

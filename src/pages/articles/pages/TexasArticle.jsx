@@ -113,14 +113,14 @@ const TexasArticle = ({ article }) => {
             <>
               As inspiration, I looked at archival photos,{" "}
               <a
-                href="https://rauluriasart.com/"
+                href="https://www.washingtonpost.com/graphics/2019/politics/mueller-report-illustrated/about/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 the Mueller report illustrated,
               </a>{" "}
               <a
-                href="https://rauluriasart.com/"
+                href="https://www.rgm.lv/?lang=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -22,6 +22,13 @@ import Quote from "../components/Quote";
 // Assets
 import cairoMoodboard from "../../../assets/articles/cairo/article/cairo-moodboard.jpg";
 import cairoPageViews from "../../../assets/articles/cairo/article/cairo-page-views.png";
+import cairoAnimationsVideoMp4 from "../../../assets/articles/cairo/article/animations-compilation-720-28.mp4";
+import cairoAnimationsPoster from "../../../assets/articles/cairo/article/animations-poster.jpg";
+import cairoGridDesktopMp4 from "../../../assets/articles/cairo/article/grid-desktop-28-1080.mp4";
+import cairoGridDesktopPoster from "../../../assets/articles/cairo/article/grid-desktop-poster.jpg";
+import cairoGridPhoneOne from "../../../assets/articles/cairo/article/phone-grid-left.jpg";
+import cairoGridPhoneTwoMp4 from "../../../assets/articles/cairo/article/grid-desktop-28-1080.mp4";
+import cairoGridPhoneTwoPoster from "../../../assets/articles/cairo/article/grid-desktop-poster.jpg";
 
 const CairoArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -32,7 +39,32 @@ const CairoArticle = ({ article }) => {
     <Template className={`article--${article.theme}`}>
       <Logo href="/" context="article" theme={article.theme} />
 
-      <CustomTopperTexas alt={topper.alt} />
+      <div className="topper">
+        <div className="topper-container">
+          <video
+            className="topper-image__mobile mobile"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={topper.alt}
+          >
+            <source src={topper.mobileSrc} type="video/mp4" />
+          </video>
+          <video
+            className="topper-image__desktop desktop"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={topper.alt}
+          >
+            <source src={topper.desktopSrc} type="video/mp4" />
+          </video>
+        </div>
+      </div>
 
       <Intro>
         <div className="information grid__1-4">
@@ -99,8 +131,8 @@ const CairoArticle = ({ article }) => {
           paragraphs={[
             "I wanted the piece to feel dreamlike, as if readers were travelling through the streets from memory.",
             <>
-              I drew inspiration from a WW2 memorial and fashion photography.
-              The music producer{" "}
+              I drew inspiration from a WW2 memorial with floating letters and
+              gridded photography porftfolios. The music producer{" "}
               <a
                 href="https://www.mergrim.net/en/"
                 target="_blank"
@@ -122,6 +154,12 @@ const CairoArticle = ({ article }) => {
           paragraphs={[
             "I asked motion designer Sarah Hashemi to join the project. Having collaborated together before, I knew she could help bring the sounds to life. We brainstormed sketches before landing on colourful, subtle line work. The animations acted as a visual cue to show that sound was integral to the piece.",
           ]}
+        />
+        <VideoLarge
+          mp4={cairoAnimationsVideoMp4}
+          poster={cairoAnimationsPoster}
+          mask="none"
+          background="brand"
         />
         <CaptionHand
           captionGridClass="grid__2-3"
@@ -169,6 +207,28 @@ const CairoArticle = ({ article }) => {
             "The final design used a six-column grid on mobile and a twelve-column grid on desktop. This gave the story a clear hierarchy while allowing the layout to feel asymmetrical and breathe.",
             "Based on the UX testing, I built an audio UI that scrolled with the story so readers could control sound without losing their place. At larger breakpoints, I introduced volume controls after testing showed desktop users struggled to adjust audio levels.",
           ]}
+        />
+        <div className="grid grid--split-media--full item">
+          <ImageMedium
+            side="left"
+            src={cairoGridPhoneOne}
+            alt="A screenshot of a family tree splitting"
+            mask="phone"
+            background="brand"
+          />
+          <VideoMedium
+            side="right"
+            mp4={cairoGridPhoneTwoMp4}
+            poster={cairoGridPhoneTwoPoster}
+            mask="phone"
+            background="brand"
+          />
+        </div>
+        <VideoLarge
+          mp4={cairoGridDesktopMp4}
+          poster={cairoGridDesktopPoster}
+          mask="none"
+          background="brand"
         />
         <Text
           paragraphs={[

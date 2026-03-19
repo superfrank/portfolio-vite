@@ -6,6 +6,8 @@ import internetHeaderImageMobile from "../../assets/articles/internet/header-ima
 import internetHeaderImageDesktop from "../../assets/articles/internet/article/header-image-background__desktop.png";
 import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
 import noMowTopperVideoDesktop from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
+import cairoTopperVideoMobile from "../../assets/articles/cairo/article/topper-mobile-1080-28.mp4";
+import cairoTopperVideoDesktop from "../../assets/articles/cairo/article/topper-desktop-1080-28.mp4";
 
 const internetLiveLink =
   "https://www.theguardian.com/technology/ng-interactive/2019/jan/11/the-internet-but-not-as-we-know-it-life-online-in-china-russia-cuba-and-india";
@@ -126,6 +128,8 @@ export const articleConfig = {
     theme: "yellow",
     component: CairoArticle,
     topper: {
+      mobileSrc: cairoTopperVideoMobile,
+      desktopSrc: cairoTopperVideoDesktop,
       alt: "Cairo article topper",
     },
     intro: {
@@ -138,7 +142,7 @@ export const articleConfig = {
         {
           key: "role",
           label: "Role",
-          value: "Animation, Art direction, Design, Development, Editing",
+          value: "Animation, Art direction, Design, Development",
         },
         {
           key: "award",
