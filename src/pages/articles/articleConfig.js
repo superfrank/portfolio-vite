@@ -152,7 +152,7 @@ export const articleConfig = {
       ],
       standfirst: [
         "Cairo Bureau Chief, Siobhán O’Grady came to us with the idea of telling a story through the city's sounds. We wanted to show how as it grows, the sounds that define it change.",
-        "My challenge was how to visualise that in a way that encouraged readers to press play.",
+        "The challenge was how to visualise that in a way that encouraged readers to press play.",
       ],
     },
   },

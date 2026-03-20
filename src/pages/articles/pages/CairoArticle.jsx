@@ -31,6 +31,10 @@ import cairoGridPhoneTwoMp4 from "../../../assets/articles/cairo/article/phone-g
 import cairoGridPhoneTwoPoster from "../../../assets/articles/cairo/article/phone-grid-poster.jpg";
 import cairoPhoneLocked from "../../../assets/articles/cairo/article/phone-locked.jpg";
 import cairoPhoneScroll from "../../../assets/articles/cairo/article/phone-scroll.jpg";
+import cairoScrollContinueMp4 from "../../../assets/articles/cairo/article/scroll-to-continue-sound-720-25.mp4";
+import cairoScrollContinuePoster from "../../../assets/articles/cairo/article/scroll-to-continue-poster.jpg";
+import cairoFullScrollMp4 from "../../../assets/articles/cairo/article/full-scroll-720-25.mp4";
+import cairoFullScrollPoster from "../../../assets/articles/cairo/article/full-scroll-poster.jpg";
 
 const CairoArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -154,7 +158,21 @@ const CairoArticle = ({ article }) => {
         />
         <Text
           paragraphs={[
-            "I asked motion designer Sarah Hashemi to join the project. Having collaborated together before, I knew she could help bring the sounds to life. We brainstormed sketches before landing on colourful, subtle line work. The animations acted as a visual cue to show that sound was integral to the piece.",
+            <>
+              I asked motion designer{" "}
+              <a
+                href="https://www.sarahhashemi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sarah Hashemi
+              </a>{" "}
+              to join the project. Having collaborated together before, I knew
+              she could help bring the sounds to life. We brainstormed sketches
+              before landing on colourful, subtle line work. The animations
+              acted as a visual cue to show that sound was integral to the
+              piece.
+            </>,
           ]}
         />
         <VideoLarge
@@ -219,6 +237,15 @@ const CairoArticle = ({ article }) => {
             },
           ]}
         />
+        <div className="grid grid--inline grid--inline-cairo item">
+          <VideoMedium
+            side="middle"
+            mp4={cairoScrollContinueMp4}
+            poster={cairoScrollContinuePoster}
+            mask="none"
+            background="none"
+          />
+        </div>
 
         <Text
           paragraphs={[
@@ -253,6 +280,12 @@ const CairoArticle = ({ article }) => {
             "I animated the topper so that the imagery faded in and out, mirroring the loss of the city’s sounds. I added a subtle pulsing wave animation on the buttons as a clear cue to enable the audio.",
           ]}
         />
+        <VideoLarge
+          mp4={cairoFullScrollMp4}
+          poster={cairoFullScrollPoster}
+          mask="none"
+          background="brand"
+        />
 
         <TextWithHeader
           heading="Outcome"
@@ -281,7 +314,7 @@ const CairoArticle = ({ article }) => {
         <Quote
           body="It's a beautiful and ambitious project that seamlessly marries visuals and audio."
           attribution="Judges comments"
-          role="Society of News Design, 43"
+          role="Society of News Design, 44"
         />
         <Data
           metrics={[

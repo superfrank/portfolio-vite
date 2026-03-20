@@ -320,3 +320,18 @@
     }
   }
 }
+.article {
+  .grid--inline-cairo {
+    .image {
+      background-color: black;
+      @include mq(desktop) {
+        margin-top: -0.5vw;
+      }
+      &__container {
+        max-width: 75%;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
