@@ -27,8 +27,10 @@ import cairoAnimationsPoster from "../../../assets/articles/cairo/article/animat
 import cairoGridDesktopMp4 from "../../../assets/articles/cairo/article/grid-desktop-28-1080.mp4";
 import cairoGridDesktopPoster from "../../../assets/articles/cairo/article/grid-desktop-poster.jpg";
 import cairoGridPhoneOne from "../../../assets/articles/cairo/article/phone-grid-left.jpg";
-import cairoGridPhoneTwoMp4 from "../../../assets/articles/cairo/article/grid-desktop-28-1080.mp4";
-import cairoGridPhoneTwoPoster from "../../../assets/articles/cairo/article/grid-desktop-poster.jpg";
+import cairoGridPhoneTwoMp4 from "../../../assets/articles/cairo/article/phone-grid-1080-28.mp4";
+import cairoGridPhoneTwoPoster from "../../../assets/articles/cairo/article/phone-grid-poster.jpg";
+import cairoPhoneLocked from "../../../assets/articles/cairo/article/phone-locked.jpg";
+import cairoPhoneScroll from "../../../assets/articles/cairo/article/phone-scroll.jpg";
 
 const CairoArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -177,6 +179,22 @@ const CairoArticle = ({ article }) => {
             "B: let the readers scroll as normal.",
           ]}
         />
+        <div className="grid grid--split-media grid--cairo-custom item">
+          <ImageMedium
+            side="left"
+            src={cairoPhoneLocked}
+            alt="A screenshot of a family tree splitting"
+            mask="phone"
+            background="brand"
+          />
+          <ImageMedium
+            side="right"
+            src={cairoPhoneScroll}
+            alt="A screenshot of a family tree splitting"
+            mask="phone-top"
+            background="brand"
+          />
+        </div>
         <TextList
           intro="The team had three main questions:"
           items={[
@@ -208,26 +226,26 @@ const CairoArticle = ({ article }) => {
             "Based on the UX testing, I built an audio UI that scrolled with the story so readers could control sound without losing their place. At larger breakpoints, I introduced volume controls after testing showed desktop users struggled to adjust audio levels.",
           ]}
         />
-        <div className="grid grid--split-media--full item">
+        <div className="grid grid--split-media item">
           <ImageMedium
             side="left"
             src={cairoGridPhoneOne}
             alt="A screenshot of a family tree splitting"
-            mask="phone"
+            mask="phone-top"
             background="brand"
           />
           <VideoMedium
             side="right"
             mp4={cairoGridPhoneTwoMp4}
             poster={cairoGridPhoneTwoPoster}
-            mask="phone"
+            mask="phone-top"
             background="brand"
           />
         </div>
         <VideoLarge
           mp4={cairoGridDesktopMp4}
           poster={cairoGridDesktopPoster}
-          mask="none"
+          mask="brand"
           background="brand"
         />
         <Text

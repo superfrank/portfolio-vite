@@ -1,5 +1,6 @@
 @use "../../sass-mq/mq" as *;
 @use "../../modules/colors" as *;
+@use "../../modules/typography" as *;
 @use "sass:color";
 @use "sass:string";
 
@@ -280,6 +281,42 @@
       &::before {
         color: color.adjust($green, $lightness: -10%);
       }
+    }
+  }
+}
+
+.grid--cairo-custom {
+  .image {
+    position: relative;
+    overflow: visible;
+  }
+
+  .image {
+    margin-top: 5.6rem;
+    @include mq(desktop) {
+      margin-top: 5vw;
+    }
+    &:before {
+      content: "A";
+      position: absolute;
+      top: -12.5vw;
+      left: 0;
+      display: block;
+      font-size: 10vw;
+      line-height: 1;
+      color: $yellow;
+      z-index: 100;
+      pointer-events: none;
+      @include mq(desktop) {
+        top: -6vw;
+        font-size: $font-size-five;
+      }
+    }
+  }
+
+  .image.grid__3-4 {
+    &:before {
+      content: "B";
     }
   }
 }

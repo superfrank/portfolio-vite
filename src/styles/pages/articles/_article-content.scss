@@ -159,6 +159,14 @@
       }
     }
   }
+
+  .image--phone-top {
+    .image__container {
+      padding-bottom: 0;
+      margin-bottom: -1px;
+    }
+  }
+
   .grid--split-media--full {
     .grid__1-2 {
       padding-bottom: 0rem;

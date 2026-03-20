@@ -5,7 +5,8 @@ const ImageMedium = ({
   mask = "phone",
   background = "brand",
 }) => {
-  const isPhoneMask = mask === "phone";
+  const isPhoneTopMask = mask === "phone-top";
+  const isPhoneMask = mask === "phone" || isPhoneTopMask;
   const sideClassName =
     side === "right"
       ? "grid__3-4"
@@ -21,15 +22,18 @@ const ImageMedium = ({
   const containerClassName = isPhoneMask ? "image__container--phone" : "";
   const maskClassName =
     background === "brand"
-      ? isPhoneMask
-        ? "image__mask--brand-phone"
+      ? isPhoneTopMask
+        ? "image__mask--brand-phone-top"
+        : isPhoneMask
+          ? "image__mask--brand-phone"
         : "image__mask--brand"
       : "";
   const imageClassName = isPhoneMask ? "image__floating--phone" : "";
+  const flushClassName = isPhoneTopMask ? "image--phone-top" : "";
 
   return (
     <div
-      className={`image ${sideClassName} image__background ${backgroundClassName}`}
+      className={`image ${sideClassName} image__background ${backgroundClassName} ${flushClassName}`}
     >
       <div className={`image__container ${containerClassName}`}>
         <div className={`image__mask ${maskClassName}`}>
