@@ -26,6 +26,7 @@ dist-ssr
 
 # Custom
 plan.md
+HANDOVER.md
 *.psd
 reference/no-mow
 reference/portfolio-webpack
