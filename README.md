@@ -1,4 +1,4 @@
-# Frank Hulley-Jones — Portfolio
+# Frank Hulley-Jones, Portfolio
 
 Personal portfolio site built with React and Vite.
 

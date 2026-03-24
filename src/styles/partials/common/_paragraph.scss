@@ -33,6 +33,20 @@ p {
     }
   }
 }
+.text__body:first-child {
+  margin-top: 1.8rem;
+
+  @include mq(desktop) {
+    margin-top: 1.5vw;
+  }
+}
+.text__body:last-child {
+  margin-bottom: 2.8rem;
+
+  @include mq(desktop) {
+    margin-bottom: 3vw;
+  }
+}
 .text__body {
   margin-top: 0;
   margin-bottom: 2vw;

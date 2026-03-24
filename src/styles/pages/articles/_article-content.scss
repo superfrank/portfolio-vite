@@ -520,10 +520,10 @@
   }
   .quote {
     margin: 0 0 5.6rem;
-    margin-top: -2.8rem;
+    margin-top: 0;
 
     @include mq(desktop) {
-      margin-top: -2.5vw;
+      margin-top: -1vw;
       margin-bottom: 3.5vw;
     }
 
