@@ -1,6 +1,6 @@
 # Frank Hulley-Jones, Portfolio
 
-Personal portfolio site built with React and Vite.
+Personal portfolio site built with Vite and React.
 
 ## Stack
 
