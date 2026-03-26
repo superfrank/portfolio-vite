@@ -25,6 +25,8 @@ dist-ssr
 *.sw?
 
 # Custom
+.env.local
+
 plan.md
 HANDOVER.md
 *.psd

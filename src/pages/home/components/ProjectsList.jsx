@@ -103,19 +103,20 @@ const ProjectsList = () => {
     },
     {
       id: 3,
-      title: "3D kitchen",
-      hoverImg: kitchenImg,
-      href: "https://wapo.st/3NG6s1a",
-      external: true,
-    },
-    {
-      id: 4,
       title: "Anthropocene",
       hoverImg: anthropoceneImg,
       // href: "https://wapo.st/4uQHJHY",
       href: "/anthropocene",
       external: false,
     },
+    {
+      id: 4,
+      title: "3D kitchen",
+      hoverImg: kitchenImg,
+      href: "https://wapo.st/3NG6s1a",
+      external: true,
+    },
+
     {
       id: 5,
       title: "Soundscape",
