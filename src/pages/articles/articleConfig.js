@@ -2,12 +2,15 @@ import InternetArticle from "./pages/InternetArticle";
 import NoMowArticle from "./pages/NoMowArticle";
 import TexasArticle from "./pages/TexasArticle";
 import CairoArticle from "./pages/CairoArticle";
+import AnthropoceneArticle from "./pages/AnthropoceneArticle";
 import internetHeaderImageMobile from "../../assets/articles/internet/header-image-background__mobile.png";
 import internetHeaderImageDesktop from "../../assets/articles/internet/article/header-image-background__desktop.png";
 import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
 import noMowTopperVideoDesktop from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
 import cairoTopperVideoMobile from "../../assets/articles/cairo/article/topper-mobile-1080-28.mp4";
 import cairoTopperVideoDesktop from "../../assets/articles/cairo/article/topper-desktop-1080-28.mp4";
+import noMowTopperVideoMobileForAnthropocene from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
+import noMowTopperVideoDesktopForAnthropocene from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
 
 const internetLiveLink =
   "https://www.theguardian.com/technology/ng-interactive/2019/jan/11/the-internet-but-not-as-we-know-it-life-online-in-china-russia-cuba-and-india";
@@ -19,6 +22,8 @@ const noMowLiveLink = import.meta.env.DEV
 const texasLiveLink = "https://wapo.st/3PxlZB2";
 
 const cairoLiveLink = "https://wapo.st/3Px9PYJ";
+
+const anthropoceneLiveLink = "https://wapo.st/4uQHJHY";
 
 export const articleConfig = {
   internet: {
@@ -119,6 +124,34 @@ export const articleConfig = {
       standfirst: [
         "Texas based reporter, Arelis Hernández brought the design team the story of a 1920's shootout on the Mexico-U.S. border and asked for help with how to tell it in the right way.",
         "We decided to make it an illustrated and animated feature contrasting the official record with the oral histories of the descendants who lived it.",
+      ],
+    },
+  },
+  anthropocene: {
+    slug: "anthropocene",
+    title: "PLACEHOLDER TITLE",
+    theme: "anthropocene",
+    component: AnthropoceneArticle,
+    topper: {
+      mobileSrc: noMowTopperVideoMobileForAnthropocene,
+      desktopSrc: noMowTopperVideoDesktopForAnthropocene,
+      alt: "Anthropocene article topper",
+    },
+    intro: {
+      headline: "PLACEHOLDER HEADLINE",
+      liveLink: anthropoceneLiveLink,
+      metaMarqueeRow: [
+        { key: "type", label: "Type", value: "Interactive" },
+        { key: "client", label: "Client", value: "The Washington Post" },
+        { key: "year", label: "Year", value: "2024" },
+        {
+          key: "role",
+          label: "Role",
+          value: "PLACEHOLDER ROLE",
+        },
+      ],
+      standfirst: [
+        "PLACEHOLDER STANDFIRST.",
       ],
     },
   },

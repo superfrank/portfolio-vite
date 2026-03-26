@@ -112,8 +112,9 @@ const ProjectsList = () => {
       id: 4,
       title: "Anthropocene",
       hoverImg: anthropoceneImg,
-      href: "https://wapo.st/4uQHJHY",
-      external: true,
+      // href: "https://wapo.st/4uQHJHY",
+      href: "/anthropocene",
+      external: false,
     },
     {
       id: 5,
