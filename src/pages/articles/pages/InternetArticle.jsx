@@ -204,7 +204,8 @@ const InternetArticle = ({ article }) => {
               <a href="https://www.theguardian.com/world/2018/sep/01/young-russians-posting-memes-face-jail-for-extremism">
                 a handful of users were charged with extremism
               </a>{" "}
-              after police searched their online accounts for political content.
+              after police searched their online accounts for political
+              {"\u00A0"}content.
             </>,
             "This section included additional features such as the reader being able to 'like' each post, add The Kremlin as a 'friend' and an animation of 1984-style eyes watching.",
           ]}

@@ -1,3 +1,5 @@
+import { widont } from "../../../utils/widont";
+
 const Text = ({ paragraphs }) => {
   return (
     <div className={`grid item`}>
@@ -5,7 +7,7 @@ const Text = ({ paragraphs }) => {
         <div className={`grid__2-3`}>
           {paragraphs.map((paragraph, index) => (
             <p className={`text__body grid__2-3`} key={`${index}`}>
-              {paragraph}
+              {typeof paragraph === "string" ? widont(paragraph) : paragraph}
             </p>
           ))}
         </div>
