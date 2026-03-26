@@ -138,7 +138,7 @@ export const articleConfig = {
       alt: "Anthropocene article topper",
     },
     intro: {
-      headline: "Hidden beneath the surface",
+      headline: "Hidden beneath the\u00A0surface",
       liveLink: anthropoceneLiveLink,
       metaMarqueeRow: [
         { key: "type", label: "Type", value: "Interactive" },
@@ -157,7 +157,7 @@ export const articleConfig = {
         },
       ],
       standfirst: [
-        "A visual deep dive into a Canadian lake’s sediment layers, revealing humanity's dramatic impact on the planet",
+        "A visual deep dive into a Canadian lake’s sediment layers, revealing humanity's dramatic impact on the planet.",
       ],
     },
   },
