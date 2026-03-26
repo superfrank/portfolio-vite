@@ -105,14 +105,14 @@ const ProjectsList = () => {
       id: 3,
       title: "3D kitchen",
       hoverImg: kitchenImg,
-      href: "https://wapo.st/46O0sd1",
+      href: "https://wapo.st/3NG6s1a",
       external: true,
     },
     {
       id: 4,
       title: "Anthropocene",
       hoverImg: anthropoceneImg,
-      href: "https://wapo.st/4s0OLrM",
+      href: "https://wapo.st/4uQHJHY",
       external: true,
     },
     {

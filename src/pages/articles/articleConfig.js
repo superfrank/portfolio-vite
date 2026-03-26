@@ -14,11 +14,11 @@ const internetLiveLink =
 
 const noMowLiveLink = import.meta.env.DEV
   ? "/no-mow/index.html"
-  : "https://www.washingtonpost.com/climate-solutions/interactive/2024/no-mow-lawn-care-tips/";
+  : "https://wapo.st/4c48WQ9";
 
-const texasLiveLink = "https://wapo.st/3ZZNmp2";
+const texasLiveLink = "https://wapo.st/3PxlZB2";
 
-const cairoLiveLink = "https://wapo.st/46YFUyB";
+const cairoLiveLink = "https://wapo.st/3Px9PYJ";
 
 export const articleConfig = {
   internet: {
