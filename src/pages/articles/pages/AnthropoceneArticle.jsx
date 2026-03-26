@@ -1,9 +1,25 @@
 import Logo from "../../../components/Logo";
 import Template from "../components/Template";
 import Intro from "../components/Intro";
+import CustomTopperTexas from "../components/texas/CustomTopperTexas";
 import MickeyHand from "../../../components/MickeyHand";
 import useIsMobile from "../../../hooks/useIsMobile";
 import Text from "../components/Text";
+import TextWithHeader from "../components/TextWithHeader";
+import ImageLarge from "../components/ImageLarge";
+import VideoLarge from "../components/VideoLarge";
+import VideoStepsLarge from "../components/VideoStepsLarge";
+import ImageStepsLarge from "../components/ImageStepsLarge";
+import ImageMedium from "../components/ImageMedium";
+import ImageSmall from "../components/ImageSmall";
+import VideoSmall from "../components/VideoSmall";
+import VideoMedium from "../components/VideoMedium";
+import CaptionHand from "../components/CaptionHand";
+import Data from "../components/Data";
+import Quote from "../components/Quote";
+
+// Assets
+import anthroResearchImage from "../../../assets/articles/anthropocene/article/moodboard-1.jpg";
 
 const AnthropoceneArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -104,8 +120,14 @@ const AnthropoceneArticle = ({ article }) => {
       <section className="content wrapper">
         <Text
           paragraphs={[
-            "PLACEHOLDER BODY COPY.",
+            "I led the design for a four-part series that explored Earth’s past to help inform modern climate change. The challenge was to create a visual identity that unified the series while giving each piece its own creative space.",
+            "As senior designer, I worked closely with graphics reporter Simon Ducroquet and designer Emily Wright, drawing inspiration from grid paper, underwater animation, old science books, 3D layering and wooden architectural models to bring the concept to life.",
           ]}
+        />
+        <ImageLarge
+          src={anthroResearchImage}
+          alt="Early visual references used during concept development"
+          background="none"
         />
       </section>
     </Template>

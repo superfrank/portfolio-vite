@@ -129,8 +129,8 @@ export const articleConfig = {
   },
   anthropocene: {
     slug: "anthropocene",
-    title: "PLACEHOLDER TITLE",
-    theme: "anthropocene",
+    title: "Hidden beneath the surface",
+    theme: "blue",
     component: AnthropoceneArticle,
     topper: {
       mobileSrc: noMowTopperVideoMobileForAnthropocene,
@@ -138,20 +138,26 @@ export const articleConfig = {
       alt: "Anthropocene article topper",
     },
     intro: {
-      headline: "PLACEHOLDER HEADLINE",
+      headline: "Hidden beneath the surface",
       liveLink: anthropoceneLiveLink,
       metaMarqueeRow: [
         { key: "type", label: "Type", value: "Interactive" },
         { key: "client", label: "Client", value: "The Washington Post" },
-        { key: "year", label: "Year", value: "2024" },
+        { key: "year", label: "Year", value: "2023" },
         {
           key: "role",
           label: "Role",
-          value: "PLACEHOLDER ROLE",
+          value: "Art direction, Design, Development, Editing",
+        },
+        {
+          key: "award",
+          label: "Awards",
+          value:
+            "AAAS Journalism Silver, AMS for Distinguished Science Journalism, SND Bronze",
         },
       ],
       standfirst: [
-        "PLACEHOLDER STANDFIRST.",
+        "A visual deep dive into a Canadian lake’s sediment layers, revealing humanity's dramatic impact on the planet",
       ],
     },
   },
