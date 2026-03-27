@@ -23,6 +23,8 @@ import Data from "../components/Data";
 import Quote from "../components/Quote";
 import ImageSequence from "../components/ImageSequence";
 
+import internetDataOneImage from "../../../assets/articles/anthropocene/article/anthro-data.png";
+
 // Assets
 import anthroResearchImage from "../../../assets/articles/anthropocene/article/moodboard-1.jpg";
 import bpStep1 from "../../../assets/articles/anthropocene/article/bp-step-1.png";
@@ -231,6 +233,62 @@ const AnthropoceneArticle = ({ article }) => {
           ]}
         />
         <VideoLarge mp4={anthroTopperArticle} background="brand" mask="brand" />
+        <TextWithHeader
+          heading="Outcome"
+          paragraphs={[
+            <>
+              The series won the{" "}
+              <a
+                href="https://sjawards.aaas.org/awards/field_award_year/2023-152"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AAAS Silver in Science Journalism
+              </a>
+              , the{" "}
+              <a
+                href="https://www.ametsoc.org/ams/about-ams/ams-awards-honors/awards/past-award-honors-recipients/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AMS Award for Distinguished Science Journalism
+              </a>
+              , and{" "}
+              <a
+                href="https://snd.org/best-of-design-competitions/results/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SND Bronze in Environment & Science
+              </a>
+              .
+            </>,
+          ]}
+        />
+        <Quote
+          body="A series of such resonance and salience that will surely rank as among the most inventive works of science journalism of all time."
+          attribution="Zachary Goldfarb"
+          role="Futures Editor, The Washington Post"
+        />
+        <Data
+          metrics={[
+            {
+              label: "Page views over 3 days",
+              src: internetDataOneImage,
+              alt: "Page views data graphic",
+            },
+            {
+              label: "Average engaged time",
+              number: "3m 12s",
+              copy: (
+                <>
+                  Stories of this length typically have an average engaged time
+                  of <strong>1m 19s</strong>
+                </>
+              ),
+            },
+          ]}
+        />
       </section>
     </Template>
   );

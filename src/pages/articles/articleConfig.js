@@ -130,7 +130,7 @@ export const articleConfig = {
   anthropocene: {
     slug: "anthropocene",
     title: "Hidden beneath the\u00A0surface",
-    theme: "nomow",
+    theme: "blue",
     component: AnthropoceneArticle,
     topper: {
       mobileSrc: anthropoceneTopperVideoMobile,
