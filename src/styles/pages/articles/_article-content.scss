@@ -328,6 +328,28 @@
     }
   }
 
+  .image-sequence {
+    margin-bottom: 2rem;
+
+    @include mq(desktop) {
+      margin-bottom: 5vw;
+    }
+
+    &__stack {
+      display: grid;
+      width: 100%;
+
+      img {
+        grid-area: 1 / 1;
+        width: 100%;
+        display: block;
+      }
+    }
+    .image__container {
+      padding-bottom: 0;
+    }
+  }
+
   .text {
     display: grid;
     // margin-top: 1rem;
