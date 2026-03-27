@@ -37,6 +37,7 @@ import anthroGraphicMobAnthro from "../../../assets/articles/anthropocene/articl
 import anthroGraphicMobGreenland from "../../../assets/articles/anthropocene/article/graphic-mob-greenland-25.mp4";
 import anthroSeychellesMob from "../../../assets/articles/anthropocene/article/step-seychelles-mob-30.mp4";
 import anthroStepDesktop from "../../../assets/articles/anthropocene/article/step-anthro-desktop-30.mp4";
+import anthroTopperArticle from "../../../assets/articles/anthropocene/article/topper-article-30.mp4";
 
 const AnthropoceneArticle = ({ article }) => {
   const { topper, intro } = article;
@@ -44,7 +45,7 @@ const AnthropoceneArticle = ({ article }) => {
   const isMobile = useIsMobile();
 
   return (
-    <Template className={`article--${article.theme}`}>
+    <Template className={`article--${article.theme} article--anthropocene`}>
       <Logo href="/" context="article" theme={article.theme} />
 
       <div className="topper">
@@ -202,7 +203,11 @@ const AnthropoceneArticle = ({ article }) => {
           <VideoMedium side="left" mp4={anthroGraphicMobAnthro} />
           <VideoMedium side="right" mp4={anthroGraphicMobGreenland} />
         </div>
-        <VideoLarge mp4={anthroGraphicDesktop} background="brand" />
+        <VideoLarge
+          mp4={anthroGraphicDesktop}
+          background="brand"
+          mask="brand"
+        />
 
         <CaptionHand
           captionGridClass="grid__2-3"
@@ -216,7 +221,7 @@ const AnthropoceneArticle = ({ article }) => {
           ]}
         />
 
-        <VideoLarge mp4={anthroStepDesktop} background="brand" />
+        <VideoLarge mp4={anthroStepDesktop} background="brand" mask="brand" />
         <div className="grid grid--split-media--full item">
           <VideoMedium side="middle" mp4={anthroSeychellesMob} />
         </div>
@@ -225,6 +230,7 @@ const AnthropoceneArticle = ({ article }) => {
             "For part one, Simon and I directed the photojournalist to capture footage of the camera submerging in the water, aiming to immerse the reader in the experience of diving into the lake's depths. I then built the transition between the video and graphics.",
           ]}
         />
+        <VideoLarge mp4={anthroTopperArticle} background="brand" mask="brand" />
       </section>
     </Template>
   );

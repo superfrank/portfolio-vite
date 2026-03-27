@@ -9,8 +9,8 @@ import noMowTopperVideoMobile from "../../assets/articles/nomow/article/no-mow-m
 import noMowTopperVideoDesktop from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
 import cairoTopperVideoMobile from "../../assets/articles/cairo/article/topper-mobile-1080-28.mp4";
 import cairoTopperVideoDesktop from "../../assets/articles/cairo/article/topper-desktop-1080-28.mp4";
-import noMowTopperVideoMobileForAnthropocene from "../../assets/articles/nomow/article/no-mow-mobile-topper-30-1080.mp4";
-import noMowTopperVideoDesktopForAnthropocene from "../../assets/articles/nomow/article/no-mow-desktop-topper-30-1080.mp4";
+import anthropoceneTopperVideoMobile from "../../assets/articles/anthropocene/topper/topper-no-text-mob-30-720.mp4";
+import anthropoceneTopperVideoDesktop from "../../assets/articles/anthropocene/topper/topper-no-text-30-720.mp4";
 
 const internetLiveLink =
   "https://www.theguardian.com/technology/ng-interactive/2019/jan/11/the-internet-but-not-as-we-know-it-life-online-in-china-russia-cuba-and-india";
@@ -130,11 +130,11 @@ export const articleConfig = {
   anthropocene: {
     slug: "anthropocene",
     title: "Hidden beneath the\u00A0surface",
-    theme: "blue",
+    theme: "nomow",
     component: AnthropoceneArticle,
     topper: {
-      mobileSrc: noMowTopperVideoMobileForAnthropocene,
-      desktopSrc: noMowTopperVideoDesktopForAnthropocene,
+      mobileSrc: anthropoceneTopperVideoMobile,
+      desktopSrc: anthropoceneTopperVideoDesktop,
       alt: "Anthropocene article topper",
     },
     intro: {
