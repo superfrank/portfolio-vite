@@ -1,8 +1,8 @@
 const ImageStepsLarge = ({ steps = [] }) => {
-  const stepItems = steps.slice(0, 3);
+  const stepItems = steps.slice(0, 4);
   const count = stepItems.length;
 
-  if (count < 2 || count > 3) return null;
+  if (count < 2 || count > 4) return null;
 
   return (
     <div className="grid item">

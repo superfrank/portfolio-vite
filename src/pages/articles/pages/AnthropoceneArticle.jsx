@@ -10,6 +10,10 @@ import ImageLarge from "../components/ImageLarge";
 import VideoLarge from "../components/VideoLarge";
 import VideoStepsLarge from "../components/VideoStepsLarge";
 import ImageStepsLarge from "../components/ImageStepsLarge";
+import anthroLakeMobile from "../../../assets/articles/anthropocene/article/lake-mobile-top.jpg";
+import anthroGreenlandMobile from "../../../assets/articles/anthropocene/article/greenland-mobile-top.jpg";
+import anthroSeychellesMobileTop from "../../../assets/articles/anthropocene/article/seychelles-mobile-top.jpg";
+import anthroWoodMobile from "../../../assets/articles/anthropocene/article/wood-mobile-top.jpg";
 import ImageMedium from "../components/ImageMedium";
 import ImageSmall from "../components/ImageSmall";
 import VideoSmall from "../components/VideoSmall";
@@ -133,7 +137,6 @@ const AnthropoceneArticle = ({ article }) => {
       <section className="content wrapper">
         <Text
           paragraphs={[
-            "I led the design for a four-part series that explored Earth’s past to help inform modern climate change. The challenge was to create a visual identity that unified the series while giving each piece its own creative space.",
             "As senior designer, I worked closely with graphics reporter Simon Ducroquet, photojournalist Bonnie Jo Mount and designer Emily Wright, drawing inspiration from grid paper, a sea interactive, old science books, 3D layering and wooden architectural models to bring the concept to life.",
           ]}
         />
@@ -161,7 +164,27 @@ const AnthropoceneArticle = ({ article }) => {
 
         <Text
           paragraphs={[
-            "There were four parts to the series in four very different climates: Canada (Ontario), Greenland, Seychelles and the U.S. (Arizona). The heavy lifting at the start to create an organic grid system was worth it, as it gave each part its own character while ensuring the series had a cohesive design.",
+            "There were four parts to the series in four very different climates: Canada (Ontario), Greenland, the Seychelles and the U.S. (Arizona).",
+          ]}
+        />
+
+        <ImageStepsLarge
+          steps={[
+            {
+              src: anthroLakeMobile,
+              alt: "Lake sediment core extraction, Canada",
+            },
+            { src: anthroGreenlandMobile, alt: "Ice core drilling, Greenland" },
+            {
+              src: anthroSeychellesMobileTop,
+              alt: "Coral core diving, Seychelles",
+            },
+            { src: anthroWoodMobile, alt: "Tree ring sampling, Arizona" },
+          ]}
+        />
+        <Text
+          paragraphs={[
+            "The heavy lifting at the start to create an organic grid system was worth it, as it gave each part its own character while ensuring the series had a cohesive design.",
           ]}
         />
         <VideoLarge
@@ -199,7 +222,7 @@ const AnthropoceneArticle = ({ article }) => {
         </div>
         <Text
           paragraphs={[
-            "Simon and I directed the photojournalist to capture footage of the camera submerging in the water, aiming to immerse the reader in the experience of diving into the lake's depths. I then built the transition between the video and graphics.",
+            "For part one, Simon and I directed the photojournalist to capture footage of the camera submerging in the water, aiming to immerse the reader in the experience of diving into the lake's depths. I then built the transition between the video and graphics.",
           ]}
         />
       </section>

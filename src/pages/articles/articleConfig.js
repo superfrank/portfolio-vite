@@ -129,7 +129,7 @@ export const articleConfig = {
   },
   anthropocene: {
     slug: "anthropocene",
-    title: "Hidden beneath the surface",
+    title: "Hidden beneath the\u00A0surface",
     theme: "blue",
     component: AnthropoceneArticle,
     topper: {
@@ -138,7 +138,7 @@ export const articleConfig = {
       alt: "Anthropocene article topper",
     },
     intro: {
-      headline: "Hidden beneath the\u00A0surface",
+      headline: "Unearthing the\u00A0future",
       liveLink: anthropoceneLiveLink,
       metaMarqueeRow: [
         { key: "type", label: "Type", value: "Interactive" },
@@ -157,7 +157,8 @@ export const articleConfig = {
         },
       ],
       standfirst: [
-        "A visual deep dive into a Canadian lake’s sediment layers, revealing humanity's dramatic impact on the planet.",
+        "I led the design for a four-part series that explored Earth’s past to help inform modern climate change.",
+        "The challenge was to create a visual identity that unified the series while giving each piece its own creative space.",
       ],
     },
   },
