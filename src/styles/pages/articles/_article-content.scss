@@ -276,22 +276,40 @@
     }
 
     .image-steps-large__mobile-stack {
-      display: grid;
+      position: relative;
+      display: block;
+
+      img,
+      video {
+        margin-bottom: 0;
+      }
     }
 
     .image-steps-large__mobile-image {
-      grid-column: 1;
-      grid-row: 1;
+      display: block;
+      width: 100%;
       opacity: 1;
     }
 
     &.image-steps-large--3 {
       .image-steps-large__mobile-image--1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 3;
         animation: nomow-steps-fade-top 5.5s ease-in-out infinite alternate;
       }
 
       .image-steps-large__mobile-image--2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 2;
         animation: nomow-steps-fade-middle 5.5s ease-in-out infinite alternate;
       }
@@ -303,6 +321,12 @@
 
     &.image-steps-large--2 {
       .image-steps-large__mobile-image--1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 2;
         animation: nomow-steps-fade-top-two 3.5s ease-in-out infinite alternate;
       }
@@ -314,16 +338,34 @@
 
     &.image-steps-large--4 {
       .image-steps-large__mobile-image--1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 4;
         animation: anthro-steps-fade-top-four 7.5s ease-in-out infinite alternate;
       }
 
       .image-steps-large__mobile-image--2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 3;
         animation: anthro-steps-fade-second-four 7.5s ease-in-out infinite alternate;
       }
 
       .image-steps-large__mobile-image--3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        will-change: opacity;
         z-index: 2;
         animation: anthro-steps-fade-third-four 7.5s ease-in-out infinite alternate;
       }
